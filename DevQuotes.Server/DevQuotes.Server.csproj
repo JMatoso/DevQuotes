@@ -14,6 +14,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Controllers\WeatherForecastController.cs" />
+	  <Compile Remove="WeatherForecast.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="App.Metrics.AspNetCore" Version="4.3.0" />
 		<PackageReference Include="App.Metrics.AspNetCore.Endpoints" Version="4.3.0" />
 		<PackageReference Include="App.Metrics.AspNetCore.Tracking" Version="4.3.0" />
@@ -40,11 +45,6 @@
   <ItemGroup>
     <ProjectReference Include="..\DevQuotes.Extensions\DevQuotes.Extensions.csproj" />
     <ProjectReference Include="..\DevQuotes.Models\DevQuotes.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Installers\Extensions\" />
-    <Folder Include="Installers\Installers\" />
   </ItemGroup>
 
 </Project>

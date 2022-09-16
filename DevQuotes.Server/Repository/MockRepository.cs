@@ -1,5 +1,6 @@
 ﻿using DevQuotes.Extensions.Pagination;
 using DevQuotes.Models;
+using DevQuotes.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -16,11 +17,16 @@ public class MockRepository<TEntity> : IMockRepository<TEntity> where TEntity : 
         _dbSet = dbContext.Set<TEntity>();
     }
 
-    public async Task<bool> ObjectExists(Expression<Func<TEntity, bool>> expression)
+    public async Task<bool> ObjectExistsAsync(Expression<Func<TEntity, bool>> expression)
     {
         IQueryable<TEntity> query = _dbSet;
 
         return await query.AnyAsync(expression);
+    }
+
+    public async Task<int> CountAsync()
+    {
+        return await _dbContext.Quotes.CountAsync();
     }
 
     public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>>? expression = null)
