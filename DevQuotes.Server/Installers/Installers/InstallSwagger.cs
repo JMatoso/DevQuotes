@@ -14,7 +14,7 @@ public class InstallSwagger : IServiceInstaller
             {
                 Title = "DevQuotes",
                 Version = $"v1",
-                Description = "Simple quotes API.",
+                Description = "Coding quotes API.",
                 Contact = new OpenApiContact
                 {
                     Name = "José Matoso",

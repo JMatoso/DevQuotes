@@ -8,7 +8,6 @@ using DevQuotes.Models.Models;
 using DevQuotes.Models.Requests;
 using DevQuotes.Server.Repository;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 using System.Net.Mime;
 
 namespace DevQuotes.Server.Controllers.v1
