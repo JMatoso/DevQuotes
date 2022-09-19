@@ -11,6 +11,16 @@ See the documentation here: [API Documentation](https://codequotes.herokuapp.com
 <h3>How to run</h3>
 <p>Restore all packages:</p>
 
-```cs
+```
 dotnet restore
+```
+
+<p>Deploy</p>
+
+```
+heroku login
+heroku git:remote -a <project-name>
+heroku buildpacks:set https://github.com/jincod/dotnetcore-buildpack
+
+git push heroku master
 ```
