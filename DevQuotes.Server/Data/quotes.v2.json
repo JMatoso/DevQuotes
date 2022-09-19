@@ -1,0 +1,462 @@
+[
+  {
+    "Id": "632846a2e53aad713157030a",
+    "Content": "new Lesson( mistake );",
+    "Created": "2022-09-19T11:38:26.7633402+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157030b",
+    "Content": "void Overthinking(){\n\tOverthinking();\n}",
+    "Created": "2022-09-19T11:38:26.7634056+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157030c",
+    "Content": "work.getInstancefrom( passion );",
+    "Created": "2022-09-19T11:38:26.7634061+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157030d",
+    "Content": "quarantine.restrictions-- ;",
+    "Created": "2022-09-19T11:38:26.7634065+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157030e",
+    "Content": "stressManager.reduce();",
+    "Created": "2022-09-19T11:38:26.7634068+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157030f",
+    "Content": "new Inspiration( ideas );",
+    "Created": "2022-09-19T11:38:26.7634073+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570310",
+    "Content": "const exams = university.getRest().Revise().Relax();",
+    "Created": "2022-09-19T11:38:26.7634078+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570311",
+    "Content": "sleep --;\nproductivity ++;",
+    "Created": "2022-09-19T11:38:26.763408+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570312",
+    "Content": "import {luck} from life",
+    "Created": "2022-09-19T11:38:26.7634083+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570313",
+    "Content": "Happy 11111100110;",
+    "Created": "2022-09-19T11:38:26.7634086+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570314",
+    "Content": "getPurpose();",
+    "Created": "2022-09-19T11:38:26.7634089+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570315",
+    "Content": "new luck( work, consistency);",
+    "Created": "2022-09-19T11:38:26.7634097+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570316",
+    "Content": "study.then( practice );",
+    "Created": "2022-09-19T11:38:26.7634098+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570317",
+    "Content": "stayHome();",
+    "Created": "2022-09-19T11:38:26.7634101+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570318",
+    "Content": "new Day(optimism);",
+    "Created": "2022-09-19T11:38:26.7634104+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570319",
+    "Content": "doubt.terminate();",
+    "Created": "2022-09-19T11:38:26.7634107+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157031a",
+    "Content": "clearYourMind();",
+    "Created": "2022-09-19T11:38:26.7634111+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157031b",
+    "Content": "await sign",
+    "Created": "2022-09-19T11:38:26.7634116+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157031c",
+    "Content": "alert( 'Be Grateful' );",
+    "Created": "2022-09-19T11:38:26.7634119+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157031d",
+    "Content": "action.take( Time.now() );",
+    "Created": "2022-09-19T11:38:26.7634121+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157031e",
+    "Content": "new Skill( desire, time);",
+    "Created": "2022-09-19T11:38:26.7634124+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157031f",
+    "Content": "believe();",
+    "Created": "2022-09-19T11:38:26.7634126+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570320",
+    "Content": "console.log( autodidacticism );\nconsole.log(autodidacticism == selfEducation);\n//Outputs 1",
+    "Created": "2022-09-19T11:38:26.7634127+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570321",
+    "Content": "memories.push( today );",
+    "Created": "2022-09-19T11:38:26.7634132+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570322",
+    "Content": "new Chance();",
+    "Created": "2022-09-19T11:38:26.7634134+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570323",
+    "Content": "new Day( hope );",
+    "Created": "2022-09-19T11:38:26.7634137+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570324",
+    "Content": "self.respect();",
+    "Created": "2022-09-19T11:38:26.7634139+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570325",
+    "Content": "setGoal( name, time, significance);",
+    "Created": "2022-09-19T11:38:26.7634142+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570326",
+    "Content": "self.getReflection();",
+    "Created": "2022-09-19T11:38:26.7634144+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570327",
+    "Content": "priorities.sort();",
+    "Created": "2022-09-19T11:38:26.7634148+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570328",
+    "Content": "cout<< past == future << endl;\n//outputs 0",
+    "Created": "2022-09-19T11:38:26.7634153+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570329",
+    "Content": "const people = [ family, friends, lover ]\n spendQualityTime( people );",
+    "Created": "2022-09-19T11:38:26.7634156+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157032a",
+    "Content": "chaos.sort();",
+    "Created": "2022-09-19T11:38:26.7634159+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157032b",
+    "Content": "procrastination.end();",
+    "Created": "2022-09-19T11:38:26.7634238+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157032c",
+    "Content": "assertTrue(time.value > money.value);",
+    "Created": "2022-09-19T11:38:26.7634241+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157032d",
+    "Content": "beKind();",
+    "Created": "2022-09-19T11:38:26.7634243+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157032e",
+    "Content": "DELETE * FROM Memories WHERE type='bad';",
+    "Created": "2022-09-19T11:38:26.7634247+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157032f",
+    "Content": "fear.reduce();",
+    "Created": "2022-09-19T11:38:26.7634249+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570330",
+    "Content": "code();",
+    "Created": "2022-09-19T11:38:26.7634251+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570331",
+    "Content": "relax();",
+    "Created": "2022-09-19T11:38:26.7634257+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570332",
+    "Content": "bePatient();",
+    "Created": "2022-09-19T11:38:26.7634259+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570333",
+    "Content": "enjoy();",
+    "Created": "2022-09-19T11:38:26.7634263+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570334",
+    "Content": "read();",
+    "Created": "2022-09-19T11:38:26.7634265+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570335",
+    "Content": "study().then( execute ).then( succeed ).catch( retry );",
+    "Created": "2022-09-19T11:38:26.7634267+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570336",
+    "Content": "new Thought( past, present, future);",
+    "Created": "2022-09-19T11:38:26.7634269+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570337",
+    "Content": "(life*)malloc( sizeof( dreams ) );",
+    "Created": "2022-09-19T11:38:26.7634276+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570338",
+    "Content": "console.log( 'HAPPINESS' );",
+    "Created": "2022-09-19T11:38:26.7634278+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570339",
+    "Content": "new Investment( self );",
+    "Created": "2022-09-19T11:38:26.7634279+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157033a",
+    "Content": "self.teach();",
+    "Created": "2022-09-19T11:38:26.7634281+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157033b",
+    "Content": "world.Restore();",
+    "Created": "2022-09-19T11:38:26.7634284+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157033c",
+    "Content": "friends.filter( friend => friend.type === 'real')",
+    "Created": "2022-09-19T11:38:26.7634285+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157033d",
+    "Content": "console.log(goals);",
+    "Created": "2022-09-19T11:38:26.7634287+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157033e",
+    "Content": "chances.forEach(chance => chance.take());",
+    "Created": "2022-09-19T11:38:26.7634289+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157033f",
+    "Content": "goals.visualize();",
+    "Created": "2022-09-19T11:38:26.7634291+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570340",
+    "Content": "alert('practice makes perfect')",
+    "Created": "2022-09-19T11:38:26.7634294+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570341",
+    "Content": "laziness.abort();",
+    "Created": "2022-09-19T11:38:26.7634296+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570342",
+    "Content": "if (self.getDoubt() > HEALTHY_THRESHHOLD){\n\tgoals.setDifficulty(HIGH);\n}",
+    "Created": "2022-09-19T11:38:26.7634299+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570343",
+    "Content": "idea.lock();\nexecute(idea);\nidea.unlock();",
+    "Created": "2022-09-19T11:38:26.7634301+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570344",
+    "Content": "garbageCollect();",
+    "Created": "2022-09-19T11:38:26.7634303+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570345",
+    "Content": "happiness++;",
+    "Created": "2022-09-19T11:38:26.7634306+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570346",
+    "Content": "new Attitude( 'positive' );",
+    "Created": "2022-09-19T11:38:26.7634308+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570347",
+    "Content": "give.then( recieve );",
+    "Created": "2022-09-19T11:38:26.7634312+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570348",
+    "Content": "action.getFeedback();",
+    "Created": "2022-09-19T11:38:26.7634314+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570349",
+    "Content": "new Media ( filter );",
+    "Created": "2022-09-19T11:38:26.7634318+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157034a",
+    "Content": "nature.CleanUp();",
+    "Created": "2022-09-19T11:38:26.763432+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157034b",
+    "Content": "happiness.getInstance();",
+    "Created": "2022-09-19T11:38:26.7634325+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157034c",
+    "Content": "if ( socialDistancing.isOver() ){\n\tpeople.hug();\n}",
+    "Created": "2022-09-19T11:38:26.7634327+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157034d",
+    "Content": "smile();",
+    "Created": "2022-09-19T11:38:26.7634332+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157034e",
+    "Content": "DELETE FROM myself WHERE emotion = 'hatered';",
+    "Created": "2022-09-19T11:38:26.7634335+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157034f",
+    "Content": "alert('stay motivated!');",
+    "Created": "2022-09-19T11:38:26.7634338+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570350",
+    "Content": "give();",
+    "Created": "2022-09-19T11:38:26.7634342+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570351",
+    "Content": "new Achievement( work, time);",
+    "Created": "2022-09-19T11:38:26.7634345+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570352",
+    "Content": "if ( angry ) {\n \t silentMode.on();\n}",
+    "Created": "2022-09-19T11:38:26.7634393+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570353",
+    "Content": "StressManager.flush();",
+    "Created": "2022-09-19T11:38:26.7634396+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570354",
+    "Content": "new Happiness( gratitude );",
+    "Created": "2022-09-19T11:38:26.7634399+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570355",
+    "Content": "while( quarantine.length > 0 ){\n\t stayCalm();\n}",
+    "Created": "2022-09-19T11:38:26.7634402+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570356",
+    "Content": "self.improve();",
+    "Created": "2022-09-19T11:38:26.7634404+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570357",
+    "Content": "patience.getInstance();",
+    "Created": "2022-09-19T11:38:26.763441+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570358",
+    "Content": "focus();",
+    "Created": "2022-09-19T11:38:26.7634412+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570359",
+    "Content": "new Relaxation( stress );",
+    "Created": "2022-09-19T11:38:26.7634415+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157035a",
+    "Content": "study.then(relax).catch(stress);",
+    "Created": "2022-09-19T11:38:26.7634418+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157035b",
+    "Content": "new Idea(knowledge,experience);",
+    "Created": "2022-09-19T11:38:26.7634422+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157035c",
+    "Content": "new Reality( dream );",
+    "Created": "2022-09-19T11:38:26.7634425+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157035d",
+    "Content": "path.create();",
+    "Created": "2022-09-19T11:38:26.7634429+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157035e",
+    "Content": "thoughts.filter( 'positive' );",
+    "Created": "2022-09-19T11:38:26.7634431+01:00"
+  },
+  {
+    "Id": "632846a2e53aad713157035f",
+    "Content": "console.log(future);",
+    "Created": "2022-09-19T11:38:26.7634432+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570360",
+    "Content": "DELETE FROM thoughts WHERE category = 'negative'",
+    "Created": "2022-09-19T11:38:26.7634522+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570361",
+    "Content": "INSERT INTO expectations (TYPE, Description)\nVALUES ('positive','It will be alright');",
+    "Created": "2022-09-19T11:38:26.7634525+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570362",
+    "Content": "SELECT * people WHERE attitude = 'good'",
+    "Created": "2022-09-19T11:38:26.763453+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570363",
+    "Content": "comfortZone.push();",
+    "Created": "2022-09-19T11:38:26.7634533+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570364",
+    "Content": "overthink.init();\n//Internal Error: too much recursion",
+    "Created": "2022-09-19T11:38:26.7634538+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570365",
+    "Content": "smile. find( reason );",
+    "Created": "2022-09-19T11:38:26.7634542+01:00"
+  }
+]

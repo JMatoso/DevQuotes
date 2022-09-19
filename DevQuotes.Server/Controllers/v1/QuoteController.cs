@@ -8,6 +8,7 @@ using DevQuotes.Models.Models;
 using DevQuotes.Models.Requests;
 using DevQuotes.Server.Repository;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using System.Net.Mime;
 
 namespace DevQuotes.Server.Controllers.v1
@@ -47,32 +48,29 @@ namespace DevQuotes.Server.Controllers.v1
 
             var result = await _quoteService.AddAsync(u => u.Content.Equals(newQuote.Content), quote);
 
-            if (result.Successful)
-            {
-                return CreatedAtAction(nameof(GetQuote), new { qid = quote.Id }, _mapper.Map<QuoteVM>(quote));
-            }
-
-            return StatusCode(result.Code, ActionReporterProvider.Set(result.Message, result.Code));
+            return result.Successful ?
+                CreatedAtAction(nameof(GetQuote), new { qid = quote.Id }, _mapper.Map<QuoteVM>(quote)) :
+                StatusCode(result.Code, ActionReporterProvider.Set(result.Message, result.Code));
         }
 
         /// <summary>
         /// Get quote.
         /// </summary>
         /// <param name="qid">Quote id.</param>
-        [HttpGet("{qid:Guid}")]
+        [HttpGet("{qid}")]
         [ProducesResponseType(typeof(QuoteVM), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<QuoteVM>> GetQuote(Guid qid)
+        public async Task<ActionResult<QuoteVM>> GetQuote(string qid)
         {
-            if (Guid.Empty == qid)
+            if (string.IsNullOrEmpty(qid))
             {
                 return BadRequest(ActionReporterProvider.Set(
                     message: "Insert a valid quote ID.",
                     statusCode: StatusCodes.Status400BadRequest));
             }
 
-            var quote = await _quoteService.GetAsync(u => u.Id == qid);
+            var quote = await _quoteService.GetAsync(u => u.Id == qid.ToString());
 
             if (quote is null)
             {
@@ -91,8 +89,9 @@ namespace DevQuotes.Server.Controllers.v1
         [ProducesResponseType(typeof(QuoteVM), StatusCodes.Status200OK)]
         public async Task<ActionResult<QuoteVM>> GetRandomQuote()
         {
-            var randomQuote = (await _quoteService.GetAllAsync())
-                .ToList()[new Random().Next(0, await _quoteService.CountAsync())];
+            var quotes = (await _quoteService.GetAllAsync()).ToList();
+
+            var randomQuote = quotes[new Random().Next(0, await _quoteService.CountAsync())];
 
             return Ok(_mapper.Map<QuoteVM>(randomQuote));
         }
@@ -115,20 +114,20 @@ namespace DevQuotes.Server.Controllers.v1
         /// Delete quote.
         /// </summary>
         /// <param name="qid">Quote id.</param>
-        [HttpDelete("{qid:Guid}")]
+        [HttpDelete("{qid}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> RemoveQuote(Guid qid)
+        public async Task<IActionResult> RemoveQuote(string qid)
         {
-            if (Guid.Empty == qid)
+            if (string.IsNullOrEmpty(qid))
             {
                 return BadRequest(ActionReporterProvider.Set(
                     message: "Insert a valid quote ID.",
                     statusCode: StatusCodes.Status400BadRequest));
             }
 
-            var quote = await _quoteService.GetAsync(x => x.Id == qid);
+            var quote = await _quoteService.GetAsync(x => x.Id == qid.ToString());
 
             if (quote is null)
             {
@@ -146,22 +145,22 @@ namespace DevQuotes.Server.Controllers.v1
         /// Update quote.
         /// </summary>
         /// <param name="qid">Quote id.</param>
-        [HttpPut("{qid:Guid}")]
+        [HttpPut("{qid}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateQuote(Guid qid, [FromBody]QuoteRequest updateQuote)
+        public async Task<IActionResult> UpdateQuote(string qid, [FromBody]QuoteRequest updateQuote)
         {
             if (!ModelState.IsValid) return BadRequest();
 
-            if (Guid.Empty == qid)
+            if (string.IsNullOrEmpty(qid))
             {
                 return BadRequest(ActionReporterProvider.Set(
                     message: "Insert a valid quote ID.",
                     statusCode: StatusCodes.Status400BadRequest));
             }
 
-            var quote = await _quoteService.GetAsync(x => x.Id == qid);
+            var quote = await _quoteService.GetAsync(x => x.Id == qid.ToString());
 
             if (quote is null)
             {
