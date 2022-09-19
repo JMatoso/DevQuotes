@@ -3,7 +3,7 @@ using DevQuotes.Extensions.Services.Installers.Interfaces;
 using DevQuotes.Server.Data;
 using DevQuotes.Server.Repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace DevQuotes.Server.Installers.Installers;
 
@@ -14,21 +14,13 @@ public class InstallServices : IServiceInstaller
         services.Configure<ApiBehaviorOptions>(opt => opt.SuppressModelStateInvalidFilter = true);
 
         services
-            .AddMetrics()
-            .AddLogging()
+            .AddCors()
             .AddHttpContextAccessor()
             .AddScoped<ValidationFilterAttribute>()
             .AddScoped(typeof(IMockRepository<>), typeof(MockRepository<>))
-            .AddDbContext<ApplicationDbContext>(options =>
+            .AddSqlite<ApplicationDbContext>(configuration.GetConnectionString("DefaultConnection"), options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
-                    sqlServerOptionsAction: sqlOptions =>
-                    {
-                        sqlOptions.EnableRetryOnFailure(
-                            maxRetryCount: 10,
-                            maxRetryDelay: TimeSpan.FromSeconds(30),
-                            errorNumbersToAdd: null);
-                    });
+                options.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
             });
 
         services.AddControllers(opt =>

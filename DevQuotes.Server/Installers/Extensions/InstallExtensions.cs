@@ -16,8 +16,6 @@ public class InstallExtensions : IExtensionInstaller
             app.UseSwaggerUI();
         }
 
-        app.UseSentryTracing();
-
         app.UseHttpsRedirection();
 
         app.UseAuthorization();

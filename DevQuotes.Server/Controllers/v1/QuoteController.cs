@@ -45,7 +45,7 @@ namespace DevQuotes.Server.Controllers.v1
 
             var quote = _mapper.Map<Quote>(newQuote);
 
-            var result = await _quoteService.AddAsync(u => u.Author.Equals(newQuote.Author) && u.Body.Equals(newQuote.Body), quote);
+            var result = await _quoteService.AddAsync(u => u.Content.Equals(newQuote.Content), quote);
 
             if (result.Successful)
             {
@@ -95,31 +95,6 @@ namespace DevQuotes.Server.Controllers.v1
                 .ToList()[new Random().Next(0, await _quoteService.CountAsync())];
 
             return Ok(_mapper.Map<QuoteVM>(randomQuote));
-        }
-
-        /// <summary>
-        /// Search quote.
-        /// </summary>
-        /// <param name="keyword">Search keyword.</param>
-        [HttpGet("{keyword}")]
-        [ProducesResponseType(typeof(List<QuoteVM>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<QuoteVM>>> GetQuoteBy(string keyword, [FromQuery] Parameters parameters)
-        {
-            if (string.IsNullOrEmpty(keyword))
-            {
-                return BadRequest(ActionReporterProvider.Set(
-                    message: "Empty search not allowed.",
-                    statusCode: StatusCodes.Status400BadRequest));
-            }
-
-            var quotes = await _quoteService.GetAllAsync(
-                parameters: parameters,
-                expression: x => x.Author.Contains(keyword) || x.Body.Contains(keyword));
-
-            HttpContext.SetDataToHeader<Metadata>("X-Pagination", quotes.Metadata);
-
-            return Ok(quotes);
         }
 
         /// <summary>
@@ -195,8 +170,7 @@ namespace DevQuotes.Server.Controllers.v1
                     statusCode: StatusCodes.Status404NotFound));
             }
 
-            quote.Body = updateQuote.Body;
-            quote.Author = updateQuote.Author;
+            quote.Content = updateQuote.Content;
 
             await _quoteService.UpdateAsync(quote);
             return Ok();
