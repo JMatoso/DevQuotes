@@ -11,10 +11,11 @@ public class InstallExtensions : IExtensionInstaller
         {
             app.UseDeveloperExceptionPage();
             app.UseExceptionHandler("/error-local-development");
-
-            app.UseSwagger();
-            app.UseSwaggerUI();
         }
+
+        // On purpose
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
         app.UseHttpsRedirection();
 

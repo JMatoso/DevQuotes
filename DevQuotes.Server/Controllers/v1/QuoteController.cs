@@ -92,7 +92,10 @@ namespace DevQuotes.Server.Controllers.v1
 
             var randomQuote = quotes[new Random().Next(0, await _quoteService.CountAsync())];
 
-            return Ok(_mapper.Map<QuoteVM>(randomQuote));
+            return Ok(new
+            {
+                Quote = randomQuote.Content
+            });
         }
 
         /// <summary>
