@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
+using DevQuotes.Models;
 
 namespace DevQuotes.Extensions.Filters;
 
@@ -10,7 +11,7 @@ public class ValidationFilterAttribute : IActionFilter
     {
         if (!filterContext.ModelState.IsValid)
         {
-            var actionReporter = ActionReporterProvider.Set("Some validation errors.", StatusCodes.Status400BadRequest, new Dictionary<object, object>());
+            var actionReporter = ActionReporterProvider.Set("Some validation errors have occurred.", StatusCodes.Status400BadRequest, new Dictionary<object, object>());
 
             foreach (var error in filterContext.ModelState)
             {

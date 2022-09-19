@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DevQuotes.Models.Entities;
@@ -7,19 +9,19 @@ namespace DevQuotes.Models.Entities;
 public class Quote
 {
     [Key]
-    public Guid Id { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
 
     [Required]
     [DataType(DataType.MultilineText)]
-    public string Body { get; set; } = default!;
-
-    [Required]
-    public string Author { get; set; } = default!;
+    public string Content { get; set; } = default!;
 
     public DateTime Created { get; set; }
 
     public Quote()
     {
+        Id = ObjectId.GenerateNewId().ToString();
         Created = DateTime.Now;
     }
 }

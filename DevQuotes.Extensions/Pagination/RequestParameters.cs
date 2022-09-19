@@ -2,9 +2,9 @@
 
 public abstract class RequestParameters
 {
-    const int maxPageSize = 50;
+    const int maxPageSize = 25;
     public int Page { get; set; } = 1;
-    private int _pageSize = 20;
+    private int _pageSize = 10;
 
     public int Limit
     {

@@ -7,10 +7,10 @@ public class PagedList<TEntity> : List<TEntity>
     {
         Metadata = new Metadata
         {
-            Count = count,
+            TotalItems = count,
             PageSize = pageSize,
             CurrentPage = pageNumber,
-            Total = (int)Math.Ceiling(count / (double)pageSize)
+            Count = (int)Math.Ceiling(count / (double)pageSize)
         };
 
         AddRange(items);

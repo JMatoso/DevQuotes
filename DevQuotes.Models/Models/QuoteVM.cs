@@ -1,9 +1,10 @@
-﻿namespace DevQuotes.Models.Models;
+﻿using MongoDB.Bson;
+
+namespace DevQuotes.Models.Models;
 
 public class QuoteVM
 {
-    public Guid Id { get; set; }
-    public string Body { get; set; } = default!;
-    public string Author { get; set; } = default!;
+    public string Id { get; set; } = default!;
+    public string Content { get; set; } = default!;
     public DateTime Created { get; set; }
 }

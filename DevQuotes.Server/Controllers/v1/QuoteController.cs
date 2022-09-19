@@ -33,7 +33,7 @@ namespace DevQuotes.Server.Controllers.v1
         }
 
         /// <summary>
-        /// Add a quote.
+        /// Add quote.
         /// </summary>
         [HttpPost]
         [ProducesResponseType(typeof(QuoteVM), StatusCodes.Status201Created)]
