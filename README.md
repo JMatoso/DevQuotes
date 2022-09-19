@@ -15,7 +15,7 @@ See the documentation here: [API Documentation](https://codequotes.herokuapp.com
 dotnet restore
 ```
 
-<p>Deploy</p>
+<p>Deploy:</p>
 
 ```
 heroku login
