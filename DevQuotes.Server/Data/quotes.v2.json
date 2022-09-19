@@ -2,26 +2,31 @@
   {
     "Id": "632846a2e53aad713157030a",
     "Content": "new Lesson( mistake );",
+    "Language": "csharp",
     "Created": "2022-09-19T11:38:26.7633402+01:00"
   },
   {
     "Id": "632846a2e53aad713157030b",
     "Content": "void Overthinking(){\n\tOverthinking();\n}",
+    "Language": "java",
     "Created": "2022-09-19T11:38:26.7634056+01:00"
   },
   {
     "Id": "632846a2e53aad713157030c",
     "Content": "work.getInstancefrom( passion );",
+    "Language": "js",
     "Created": "2022-09-19T11:38:26.7634061+01:00"
   },
   {
     "Id": "632846a2e53aad713157030d",
-    "Content": "quarantine.restrictions-- ;",
+    "Content": "quarantine.restrictions--;",
+    "Language": "js",
     "Created": "2022-09-19T11:38:26.7634065+01:00"
   },
   {
     "Id": "632846a2e53aad713157030e",
     "Content": "stressManager.reduce();",
+    "Language": "js",
     "Created": "2022-09-19T11:38:26.7634068+01:00"
   },
   {

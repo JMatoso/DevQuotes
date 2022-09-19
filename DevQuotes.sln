@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{488953
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DB353359-D43D-4BF0-AB62-D424B54ECEEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Extensions", "DevQuotes.Extensions\DevQuotes.Extensions.csproj", "{06E8B14E-03C4-487E-B34A-F5EA516AF960}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Extensions", "DevQuotes.Extensions\DevQuotes.Extensions.csproj", "{06E8B14E-03C4-487E-B34A-F5EA516AF960}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Server", "DevQuotes.Server\DevQuotes.Server.csproj", "{B2100A57-8BF8-4831-907E-32D0FEBCF122}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Server", "DevQuotes.Server\DevQuotes.Server.csproj", "{B2100A57-8BF8-4831-907E-32D0FEBCF122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Models", "DevQuotes.Models\DevQuotes.Models.csproj", "{1B82D0A9-ECA8-4AA1-BD23-C46794CF186F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Models", "DevQuotes.Models\DevQuotes.Models.csproj", "{1B82D0A9-ECA8-4AA1-BD23-C46794CF186F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

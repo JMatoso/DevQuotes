@@ -148,7 +148,7 @@ namespace DevQuotes.Server.Controllers.v1
         /// </summary>
         /// <param name="qid">Quote id.</param>
         [HttpPut("{qid}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ActionReporter), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateQuote(string qid, [FromBody]QuoteRequest updateQuote)
