@@ -9,4 +9,8 @@ See the documentation here: [API Documentation](https://codequotes.herokuapp.com
 </ul>
 
 <h3>How to run</h3>
-Restore packages <code>dotnet restore</code>
+Restore packages 
+
+´´´cs
+dotnet restore
+´´´
