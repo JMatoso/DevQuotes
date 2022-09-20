@@ -1,7 +1,7 @@
 [
   {
     "Id": "632846a2e53aad713157030a",
-    "Content": "new Lesson( mistake );",
+    "Content": "new Lesson(mistake);",
     "Language": "csharp",
     "Created": "2022-09-19T11:38:26.7633402+01:00"
   },
@@ -13,7 +13,7 @@
   },
   {
     "Id": "632846a2e53aad713157030c",
-    "Content": "work.getInstancefrom( passion );",
+    "Content": "work.getInstancefrom(passion);",
     "Language": "js",
     "Created": "2022-09-19T11:38:26.7634061+01:00"
   },
@@ -31,7 +31,7 @@
   },
   {
     "Id": "632846a2e53aad713157030f",
-    "Content": "new Inspiration( ideas );",
+    "Content": "new Inspiration(ideas);",
     "Created": "2022-09-19T11:38:26.7634073+01:00"
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "Id": "632846a2e53aad7131570311",
-    "Content": "sleep --;\nproductivity ++;",
+    "Content": "sleep--;\nproductivity++;",
     "Created": "2022-09-19T11:38:26.763408+01:00"
   },
   {
     "Id": "632846a2e53aad7131570312",
-    "Content": "import {luck} from life",
+    "Content": "import {luck} from life;",
     "Created": "2022-09-19T11:38:26.7634083+01:00"
   },
   {
@@ -61,12 +61,12 @@
   },
   {
     "Id": "632846a2e53aad7131570315",
-    "Content": "new luck( work, consistency);",
+    "Content": "new luck(work, consistency);",
     "Created": "2022-09-19T11:38:26.7634097+01:00"
   },
   {
     "Id": "632846a2e53aad7131570316",
-    "Content": "study.then( practice );",
+    "Content": "study.then(practice());",
     "Created": "2022-09-19T11:38:26.7634098+01:00"
   },
   {
@@ -96,17 +96,17 @@
   },
   {
     "Id": "632846a2e53aad713157031c",
-    "Content": "alert( 'Be Grateful' );",
+    "Content": "alert('Be Grateful');",
     "Created": "2022-09-19T11:38:26.7634119+01:00"
   },
   {
     "Id": "632846a2e53aad713157031d",
-    "Content": "action.take( Time.now() );",
+    "Content": "action.take(Time.now());",
     "Created": "2022-09-19T11:38:26.7634121+01:00"
   },
   {
     "Id": "632846a2e53aad713157031e",
-    "Content": "new Skill( desire, time);",
+    "Content": "new Skill(desire, time);",
     "Created": "2022-09-19T11:38:26.7634124+01:00"
   },
   {
@@ -116,12 +116,12 @@
   },
   {
     "Id": "632846a2e53aad7131570320",
-    "Content": "console.log( autodidacticism );\nconsole.log(autodidacticism == selfEducation);\n//Outputs 1",
+    "Content": "console.log(autodidacticism);\nconsole.log(autodidacticism == selfEducation);\n//Outputs 1",
     "Created": "2022-09-19T11:38:26.7634127+01:00"
   },
   {
     "Id": "632846a2e53aad7131570321",
-    "Content": "memories.push( today );",
+    "Content": "memories.push(today);",
     "Created": "2022-09-19T11:38:26.7634132+01:00"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
     "Id": "632846a2e53aad7131570323",
-    "Content": "new Day( hope );",
+    "Content": "new Day(hope);",
     "Created": "2022-09-19T11:38:26.7634137+01:00"
   },
   {
@@ -141,7 +141,7 @@
   },
   {
     "Id": "632846a2e53aad7131570325",
-    "Content": "setGoal( name, time, significance);",
+    "Content": "setGoal(name, time, significance);",
     "Created": "2022-09-19T11:38:26.7634142+01:00"
   },
   {
@@ -161,7 +161,7 @@
   },
   {
     "Id": "632846a2e53aad7131570329",
-    "Content": "const people = [ family, friends, lover ]\n spendQualityTime( people );",
+    "Content": "const people = [family, friends, lover]\nspendQualityTime(people);",
     "Created": "2022-09-19T11:38:26.7634156+01:00"
   },
   {
@@ -221,27 +221,27 @@
   },
   {
     "Id": "632846a2e53aad7131570335",
-    "Content": "study().then( execute ).then( succeed ).catch( retry );",
+    "Content": "study().then(execute()).then(succeed()).catch(retry());",
     "Created": "2022-09-19T11:38:26.7634267+01:00"
   },
   {
     "Id": "632846a2e53aad7131570336",
-    "Content": "new Thought( past, present, future);",
+    "Content": "new Thought(past, present, future);",
     "Created": "2022-09-19T11:38:26.7634269+01:00"
   },
   {
     "Id": "632846a2e53aad7131570337",
-    "Content": "(life*)malloc( sizeof( dreams ) );",
+    "Content": "(life*)malloc(sizeof(dreams));",
     "Created": "2022-09-19T11:38:26.7634276+01:00"
   },
   {
     "Id": "632846a2e53aad7131570338",
-    "Content": "console.log( 'HAPPINESS' );",
+    "Content": "console.log('HAPPINESS');",
     "Created": "2022-09-19T11:38:26.7634278+01:00"
   },
   {
     "Id": "632846a2e53aad7131570339",
-    "Content": "new Investment( self );",
+    "Content": "new Investment(self);",
     "Created": "2022-09-19T11:38:26.7634279+01:00"
   },
   {
@@ -256,7 +256,7 @@
   },
   {
     "Id": "632846a2e53aad713157033c",
-    "Content": "friends.filter( friend => friend.type === 'real')",
+    "Content": "friends.filter(friend => friend.type === 'real')",
     "Created": "2022-09-19T11:38:26.7634285+01:00"
   },
   {
@@ -306,12 +306,12 @@
   },
   {
     "Id": "632846a2e53aad7131570346",
-    "Content": "new Attitude( 'positive' );",
+    "Content": "new Attitude('positive');",
     "Created": "2022-09-19T11:38:26.7634308+01:00"
   },
   {
     "Id": "632846a2e53aad7131570347",
-    "Content": "give.then( recieve );",
+    "Content": "give.then(recieve());",
     "Created": "2022-09-19T11:38:26.7634312+01:00"
   },
   {
@@ -321,7 +321,7 @@
   },
   {
     "Id": "632846a2e53aad7131570349",
-    "Content": "new Media ( filter );",
+    "Content": "new Media(filter);",
     "Created": "2022-09-19T11:38:26.7634318+01:00"
   },
   {
@@ -336,7 +336,7 @@
   },
   {
     "Id": "632846a2e53aad713157034c",
-    "Content": "if ( socialDistancing.isOver() ){\n\tpeople.hug();\n}",
+    "Content": "if (socialDistancing.isOver()){\n\tpeople.hug();\n}",
     "Created": "2022-09-19T11:38:26.7634327+01:00"
   },
   {
@@ -346,7 +346,7 @@
   },
   {
     "Id": "632846a2e53aad713157034e",
-    "Content": "DELETE FROM myself WHERE emotion = 'hatered';",
+    "Content": "DELETE * FROM myself WHERE emotion = 'hatered';",
     "Created": "2022-09-19T11:38:26.7634335+01:00"
   },
   {
@@ -361,12 +361,12 @@
   },
   {
     "Id": "632846a2e53aad7131570351",
-    "Content": "new Achievement( work, time);",
+    "Content": "new Achievement(work, time);",
     "Created": "2022-09-19T11:38:26.7634345+01:00"
   },
   {
     "Id": "632846a2e53aad7131570352",
-    "Content": "if ( angry ) {\n \t silentMode.on();\n}",
+    "Content": "if (angry) {\n\t silentMode.on();\n}",
     "Created": "2022-09-19T11:38:26.7634393+01:00"
   },
   {
@@ -376,12 +376,12 @@
   },
   {
     "Id": "632846a2e53aad7131570354",
-    "Content": "new Happiness( gratitude );",
+    "Content": "new Happiness(gratitude);",
     "Created": "2022-09-19T11:38:26.7634399+01:00"
   },
   {
     "Id": "632846a2e53aad7131570355",
-    "Content": "while( quarantine.length > 0 ){\n\t stayCalm();\n}",
+    "Content": "while(quarantine.length > 0){\n\tstayCalm();\n}",
     "Created": "2022-09-19T11:38:26.7634402+01:00"
   },
   {
@@ -401,22 +401,22 @@
   },
   {
     "Id": "632846a2e53aad7131570359",
-    "Content": "new Relaxation( stress );",
+    "Content": "new Relaxation(stress);",
     "Created": "2022-09-19T11:38:26.7634415+01:00"
   },
   {
     "Id": "632846a2e53aad713157035a",
-    "Content": "study.then(relax).catch(stress);",
+    "Content": "study.then(relax()).catch(stress());",
     "Created": "2022-09-19T11:38:26.7634418+01:00"
   },
   {
     "Id": "632846a2e53aad713157035b",
-    "Content": "new Idea(knowledge,experience);",
+    "Content": "new Idea(knowledge, experience);",
     "Created": "2022-09-19T11:38:26.7634422+01:00"
   },
   {
     "Id": "632846a2e53aad713157035c",
-    "Content": "new Reality( dream );",
+    "Content": "new Reality(dream);",
     "Created": "2022-09-19T11:38:26.7634425+01:00"
   },
   {
@@ -426,7 +426,7 @@
   },
   {
     "Id": "632846a2e53aad713157035e",
-    "Content": "thoughts.filter( 'positive' );",
+    "Content": "thoughts.filter('positive');",
     "Created": "2022-09-19T11:38:26.7634431+01:00"
   },
   {
@@ -436,7 +436,7 @@
   },
   {
     "Id": "632846a2e53aad7131570360",
-    "Content": "DELETE FROM thoughts WHERE category = 'negative'",
+    "Content": "DELETE * FROM thoughts WHERE category = 'negative';",
     "Created": "2022-09-19T11:38:26.7634522+01:00"
   },
   {
@@ -446,7 +446,7 @@
   },
   {
     "Id": "632846a2e53aad7131570362",
-    "Content": "SELECT * people WHERE attitude = 'good'",
+    "Content": "SELECT * people WHERE attitude = 'good';",
     "Created": "2022-09-19T11:38:26.763453+01:00"
   },
   {
@@ -461,7 +461,37 @@
   },
   {
     "Id": "632846a2e53aad7131570365",
-    "Content": "smile. find( reason );",
+    "Content": "smile.find(reason);",
+    "Created": "2022-09-19T11:38:26.7634542+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570366",
+    "Content": "motivation++;",
+    "Created": "2022-09-19T11:38:26.7634542+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570367",
+    "Content": "procrastination--;",
+    "Created": "2022-09-19T11:38:26.7634542+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570368",
+    "Content": "live.now();",
+    "Created": "2022-09-19T11:38:26.7634542+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570369",
+    "Content": "setInterval(code, 700000)",
+    "Created": "2022-09-19T11:38:26.7634542+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570370",
+    "Content": "class Mood extends Happiness { }",
+    "Created": "2022-09-19T11:38:26.7634542+01:00"
+  },
+  {
+    "Id": "632846a2e53aad7131570371",
+    "Content": "me.status = Status.Focused;",
     "Created": "2022-09-19T11:38:26.7634542+01:00"
   }
 ]

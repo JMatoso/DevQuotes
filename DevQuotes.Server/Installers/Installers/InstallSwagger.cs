@@ -14,12 +14,12 @@ public class InstallSwagger : IServiceInstaller
             {
                 Title = "DevQuotes",
                 Version = $"v1",
-                Description = "Coding quotes API.",
+                Description = "Motivational coding quotes API.",
                 Contact = new OpenApiContact
                 {
-                    Name = "José Matoso",
+                    Name = "DevQuotes",
                     Email = "jos3matosoj@gmail.com",
-                    Url = new Uri("https://github.com/JMatoso/DevQuotes")
+                    Url = new Uri("https://codequotes-nine.vercel.app/")
                 },
                 License = new OpenApiLicense
                 {

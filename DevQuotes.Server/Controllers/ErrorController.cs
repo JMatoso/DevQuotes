@@ -8,6 +8,7 @@ namespace DevQuotes.Server.Controllers;
 /// </summary>
 [ApiController]
 [Route("api/error")]
+[ApiExplorerSettings(IgnoreApi = true)]
 public class ErrorController : ControllerBase
 {
     /// <summary>

@@ -32,7 +32,7 @@ namespace DevQuotes.Server.Data
         {
             if (Quotes.Any()) return;
 
-            string fileContent = File.ReadAllText("Data/quotes.json");
+            string fileContent = File.ReadAllText("Data/Collections/quotes.v2.json");
             var oldQuotes = JsonConvert.DeserializeObject<List<Quote>>(fileContent);
 
             var quotes = new List<Quote>();
@@ -49,8 +49,6 @@ namespace DevQuotes.Server.Data
             {
                 Quotes.AddRange(quotes);
                 SaveChanges();
-
-                File.WriteAllText("Data/quotes.v2.json", JsonConvert.SerializeObject(quotes, Formatting.Indented));
             }
         }
     }

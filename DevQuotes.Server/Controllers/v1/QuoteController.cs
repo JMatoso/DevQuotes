@@ -33,6 +33,17 @@ namespace DevQuotes.Server.Controllers.v1
         }
 
         /// <summary>
+        /// Get all quotes.
+        /// </summary>
+        [HttpGet("all")]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<IEnumerable<QuoteVM>>> GetAllData()
+        {
+            return Ok(_mapper.Map<List<QuoteVM>>(await _quoteService.GetAllAsync()));
+        }
+
+        /// <summary>
         /// Add quote.
         /// </summary>
         [HttpPost]
