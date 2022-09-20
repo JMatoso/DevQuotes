@@ -73,7 +73,7 @@ code {
 
 @media screen and (max-width: 768px) {
     .snippet {
-        width: 85%;
+        width: 90%;
     }
 
     code {
