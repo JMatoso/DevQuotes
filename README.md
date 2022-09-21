@@ -29,4 +29,3 @@ heroku git:remote -a <project-name>
 heroku buildpacks:set https://github.com/jincod/dotnetcore-buildpack
 
 git push heroku master
-```
