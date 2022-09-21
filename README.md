@@ -15,6 +15,12 @@ See the documentation here: [API Documentation](https://codequotes.herokuapp.com
 dotnet restore
 ```
 
+<p>Run:</p>
+
+```
+dotnet run
+```
+
 <p>Deploy:</p>
 
 ```
