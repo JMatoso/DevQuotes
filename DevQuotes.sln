@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Application", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Api", "DevQuotes.Api\DevQuotes.Api.csproj", "{1FFFE904-01F2-42BE-9169-2C6A47577710}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Web", "DevQuotes.Web\DevQuotes.Web.csproj", "{38779CA2-2011-4810-9B36-7FFF4345BFF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{1FFFE904-01F2-42BE-9169-2C6A47577710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FFFE904-01F2-42BE-9169-2C6A47577710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FFFE904-01F2-42BE-9169-2C6A47577710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
