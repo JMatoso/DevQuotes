@@ -1,0 +1,394 @@
+[
+  {
+    "Content": "new Lesson(mistake);",
+    "Language": "csharp"
+  },
+  {
+    "Content": "void Overthinking(){\n\tOverthinking();\n}",
+    "Language": "java"
+  },
+  {
+    "Content": "work.getInstancefrom(passion);",
+    "Language": "js"
+  },
+  {
+    "Content": "quarantine.restrictions--;",
+    "Language": "js"
+  },
+  {
+    "Content": "stressManager.reduce();",
+    "Language": "js"
+  },
+  {
+    "Content": "new Inspiration(ideas);",
+    "Language": "csharp",
+  },
+  {
+    "Content": "const exams = university.getRest().Revise().Relax();",
+    "Language": "js",
+  },
+  {
+    "Content": "sleep--;\nproductivity++;",
+    "Language": "go"
+  },
+  {
+    "Content": "import {luck} from life;",
+    "Language": "python"
+  },
+  {
+    "Content": "Happy 11111100110;",
+    "Language": "byte"
+  },
+  {
+    "Content": "getPurpose();",
+    "Language": "js"
+  },
+  {
+    "Content": "new luck(work, consistency);",
+    "Language": "java"
+  },
+  {
+    "Content": "study.then(practice());",
+    "Language": "js"
+  },
+  {
+    "Content": "stayHome();",
+    "Language": "js"
+  },
+  {
+    "Content": "new Day(optimism);",
+    "Language": "swift"
+  },
+  {
+    "Content": "doubt.terminate();",
+    "Language": "js"
+  },
+  {
+    "Content": "clearYourMind();",
+    "Language": "js"
+  },
+  {
+    "Content": "await sign",
+    "Language": "js"
+  },
+  {
+    "Content": "alert('Be Grateful');",
+    "Language": "js"
+  },
+  {
+    "Content": "action.take(Time.now());",
+    "Language": "js"
+  },
+  {
+    "Content": "new Skill(desire, time);",
+    "Language": "kotlin"
+  },
+  {
+    "Content": "believe();",
+    "Language": "js"
+  },
+  {
+    "Content": "console.log(autodidacticism);\nconsole.log(autodidacticism == selfEducation);\n//Outputs 1",
+    "Language": "js"
+  },
+  {
+    "Content": "memories.push(today);",
+    "Language": "js"
+  },
+  {
+    "Content": "new Chance();",
+    "Language": "csharp"
+  },
+  {
+    "Content": "new Day(hope);",
+    "Language": "kotlin"
+  },
+  {
+    "Content": "self.respect();",
+    "Language": "js"
+  },
+  {
+    "Content": "setGoal(name, time, significance);",
+    "Language": "java"
+  },
+  {
+    "Content": "self.getReflection();",
+    "Language": "python"
+  },
+  {
+    "Content": "priorities.sort();",
+    "Language": "js"
+  },
+  {
+    "Content": "cout<< past == future << endl;\n//outputs 0",
+    "Language": "c++"
+  },
+  {
+    "Content": "const people = [family, friends, lover]\nspendQualityTime(people);",
+    "Language": "js"
+  },
+  {
+    "Content": "chaos.sort();",
+    "Language": "js"
+  },
+  {
+    "Content": "procrastination.end();",
+    "Language": "js"
+  },
+  {
+    "Content": "assertTrue(time.value > money.value);",
+    "Language": "js"
+  },
+  {
+    "Content": "beKind();",
+    "Language": "js"
+  },
+  {
+    "Content": "DELETE * FROM Memories WHERE type='bad';",
+    "Language": "sql"
+  },
+  {
+    "Content": "fear.reduce();",
+    "Language": "js"
+  },
+  {
+    "Content": "code();",
+    "Language": "js"
+  },
+  {
+    "Content": "relax();",
+    "Language": "java"
+  },
+  {
+    "Content": "bePatient();",
+    "Language": "java"
+  },
+  {
+    "Content": "enjoy();",
+    "Language": "c",
+  },
+  {
+    "Content": "read();",
+    "Language": "pyhon"
+  },
+  {
+    "Content": "study().then(execute()).then(succeed()).catch(retry());",
+    "Language": "js"
+  },
+  {
+    "Content": "new Thought(past, present, future);",
+    "Language": "c#"
+  },
+  {
+    "Content": "(life*)malloc(sizeof(dreams));",
+    "Language": "c"
+  },
+  {
+    "Content": "console.log('HAPPINESS');",
+    "Language": "js"
+  },
+  {
+    "Content": "new Investment(self);",
+    "Language": "python"
+  },
+  {
+    "Content": "self.teach();",
+    "Language": "java"
+  },
+  {
+    "Content": "world.Restore();",
+    "Language": "js"
+  },
+  {
+    "Content": "friends.filter(friend => friend.type === 'real')",
+    "Language": "js"
+  },
+  {
+    "Content": "console.log(goals);",
+    "Language": "js"
+  },
+  {
+    "Content": "chances.forEach(chance => chance.take());",
+    "Language": "js"
+  },
+  {
+    "Content": "goals.visualize();",
+    "Language": "python"
+  },
+  {
+    "Content": "alert('practice makes perfect')",
+    "Language": "js"
+  },
+  {
+    "Content": "laziness.abort();",
+    "Language": "js"
+  },
+  {
+    "Content": "if (self.getDoubt() > HEALTHY_THRESHHOLD){\n\tgoals.setDifficulty(HIGH);\n}",
+    "Language": "java"
+  },
+  {
+    "Content": "idea.lock();\nexecute(idea);\nidea.unlock();",
+    "Language": "java"
+  },
+  {
+    "Content": "garbageCollect();",
+    "Language": "js"
+  },
+  {
+    "Content": "happiness++;",
+    "Language": "go"
+  },
+  {
+    "Content": "new Attitude('positive');",
+    "Language": "c#"
+  },
+  {
+    "Content": "give.then(recieve());",
+    "Language": "js"
+  },
+  {
+    "Content": "action.getFeedback();",
+    "Language": "java"
+  },
+  {
+    "Content": "new Media(filter);",
+    "Language": "c#"
+  },
+  {
+    "Content": "nature.CleanUp();",
+    "Language": "js"
+  },
+  {
+    "Content": "happiness.getInstance();",
+    "Language": "js"
+  },
+  {
+    "Content": "if (socialDistancing.isOver()){\n\tpeople.hug();\n}",
+    "Language": "python"
+  },
+  {
+    "Content": "smile();",
+    "Language": "python"
+  },
+  {
+    "Content": "DELETE * FROM myself WHERE emotion = 'hatered';",
+    "Language": "sql"
+  },
+  {
+    "Content": "alert('stay motivated!');",
+    "Language": "js"
+  },
+  {
+    "Content": "give();",
+    "Language": "js"
+  },
+  {
+    "Content": "new Achievement(work, time);",
+    "Language": "c#"
+  },
+  {
+    "Content": "if (angry) {\n\t silentMode.on();\n}",
+    "Language": "c"
+  },
+  {
+    "Content": "StressManager.flush();",
+    "Language": "js"
+  },
+  {
+    "Content": "new Happiness(gratitude);",
+    "Language": "c#"
+  },
+  {
+    "Content": "while(quarantine.length > 0){\n\tstayCalm();\n}",
+    "Language": "c"
+  },
+  {
+    "Content": "self.improve();",
+    "Language": "python"
+  },
+  {
+    "Content": "patience.getInstance();",
+    "Language": "js"
+  },
+  {
+    "Content": "focus();",
+    "Language": "js"
+  },
+  {
+    "Content": "new Relaxation(stress);",
+    "Language": "js"
+  },
+  {
+    "Content": "study.then(relax()).catch(stress());",
+    "Language": "js"
+  },
+  {
+    "Content": "new Idea(knowledge, experience);",
+    "Language": "c#"
+  },
+  {
+    "Content": "new Reality(dream);",
+    "Language": "c#"
+  },
+  {
+    "Content": "path.create();",
+    "Language": "js"
+  },
+  {
+    "Content": "thoughts.filter('positive');",
+    "Language": "js"
+  },
+  {
+    "Content": "console.log(future);",
+    "Language": "js"
+  },
+  {
+    "Content": "DELETE * FROM thoughts WHERE category = 'negative';",
+    "Language": "sql"
+  },
+  {
+    "Content": "INSERT INTO expectations (TYPE, Description)\nVALUES ('positive','It will be alright');",
+    "Language": "sql"
+  },
+  {
+    "Content": "SELECT * people WHERE attitude = 'good';",
+    "Language": "sql"
+  },
+  {
+    "Content": "comfortZone.push();",
+    "Language": "js"
+  },
+  {
+    "Content": "overthink.init();\n//Internal Error: too much recursion",
+    "Language": "js"
+  },
+  {
+    "Content": "smile.find(reason);",
+    "Language": "js"
+  },
+  {
+    "Content": "motivation++;",
+    "Language": "go"
+  },
+  {
+    "Content": "procrastination--;",
+    "Language": "go"
+  },
+  {
+    "Content": "live.now();",
+    "Language": "js"
+  },
+  {
+    "Content": "setInterval(code, 700000)",
+    "Language": "js"
+  },
+  {
+    "Content": "class Mood extends Happiness { }",
+    "Language": "java"
+  },
+  {
+    "Content": "me.status = Status.Focused;",
+    "Language": "js"
+  }
+]

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<NoWarn>$(NoWarn);1572</NoWarn>
+		<NoWarn>$(NoWarn);1573</NoWarn>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevQuotes.Application\DevQuotes.Application.csproj" />
+    <ProjectReference Include="..\DevQuotes.Communication\DevQuotes.Communication.csproj" />
+    <ProjectReference Include="..\DevQuotes.Exceptions\DevQuotes.Exceptions.csproj" />
+    <ProjectReference Include="..\DevQuotes.Infrastructure\DevQuotes.Infrastructure.csproj" />
+    <ProjectReference Include="..\DevQuotes.Shared\DevQuotes.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

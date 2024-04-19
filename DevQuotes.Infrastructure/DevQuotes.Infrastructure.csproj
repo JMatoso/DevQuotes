@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.3.24172.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.3.24172.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2-dev-00338" />
+    <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.1.0-dev-00943" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevQuotes.Communication\DevQuotes.Communication.csproj" />
+    <ProjectReference Include="..\DevQuotes.Domain\DevQuotes.Domain.csproj" />
+    <ProjectReference Include="..\DevQuotes.Exceptions\DevQuotes.Exceptions.csproj" />
+    <ProjectReference Include="..\DevQuotes.Shared\DevQuotes.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
