@@ -4,8 +4,8 @@ See the documentation here: [API Documentation](https://codequotes.herokuapp.com
 
 <h3>Tools</h3>
 <ul>
-    <li>VS 2022</li>
-    <li>.NET Core 6.0</li>
+    <li>VS 2022+</li>
+    <li>.NET Core 8.0+</li>
 </ul>
 
 <h3>How to run</h3>
