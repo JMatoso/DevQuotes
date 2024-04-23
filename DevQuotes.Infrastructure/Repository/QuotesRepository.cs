@@ -17,7 +17,7 @@ public class QuotesRepository(ApplicationDbContext dbContext) : IQuotesRepositor
     {
         var quotes = _dbContext.Quotes.OrderByDescending(x => x.Created).AsNoTracking();
 
-        if (FakeCache.CanRefreshCache())
+        if (FakeCache.CanRefreshCache)
         {
             FakeCache.Count = await quotes.CountAsync();
             FakeCache.LastUpdate = DateTime.UtcNow;
@@ -84,5 +84,5 @@ public static class FakeCache
     public static int Count { get; set; }
     public static DateTime LastUpdate { get; set; }
 
-    public static bool CanRefreshCache() => Count == 0 || DateTime.UtcNow.Subtract(LastUpdate).TotalMinutes > 10;
+    public static bool CanRefreshCache => Count == 0 || DateTime.UtcNow.Subtract(LastUpdate).TotalMinutes > 10;
 }

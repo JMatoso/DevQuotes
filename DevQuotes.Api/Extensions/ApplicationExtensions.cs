@@ -22,8 +22,8 @@ public static class ApplicationExtensions
         });
 
         services.AddSwaggerService();
-        services.AddInfrastrutures();
         services.AddApplicationServices();
+        services.AddInfrastrutures(configuration);
         services.AddDatabaseContext(configuration);
     }
 }

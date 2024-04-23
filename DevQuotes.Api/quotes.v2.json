@@ -21,11 +21,11 @@
   },
   {
     "Content": "new Inspiration(ideas);",
-    "Language": "csharp",
+    "Language": "csharp"
   },
   {
     "Content": "const exams = university.getRest().Revise().Relax();",
-    "Language": "js",
+    "Language": "js"
   },
   {
     "Content": "sleep--;\nproductivity++;",
@@ -165,7 +165,7 @@
   },
   {
     "Content": "enjoy();",
-    "Language": "c",
+    "Language": "c"
   },
   {
     "Content": "read();",

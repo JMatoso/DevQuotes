@@ -40,8 +40,8 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetAllQuotesUse
     /// <param name="qid">Quote id.</param>
     [HttpGet("{qid}")]
     [ProducesResponseType(typeof(QuoteJsonResponse), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ResponseExtensions), StatusCodes.Status404NotFound)]
-    [ProducesResponseType(typeof(ResponseExtensions), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<QuoteJsonResponse>> GetAsync([FromRoute]Guid qid)
     {
         return qid == Guid.Empty

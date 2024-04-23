@@ -5,21 +5,19 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DB353359-D43D-4BF0-AB62-D424B54ECEEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Domain", "DevQuotes.Domain\DevQuotes.Domain.csproj", "{680CCF01-E7D3-4C65-8D48-F00286CE4D9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Domain", "DevQuotes.Domain\DevQuotes.Domain.csproj", "{680CCF01-E7D3-4C65-8D48-F00286CE4D9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Infrastructure", "DevQuotes.Infrastructure\DevQuotes.Infrastructure.csproj", "{7B53D7B3-C61C-4FBF-84F4-177B6BA3A73D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Infrastructure", "DevQuotes.Infrastructure\DevQuotes.Infrastructure.csproj", "{7B53D7B3-C61C-4FBF-84F4-177B6BA3A73D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Communication", "DevQuotes.Communication\DevQuotes.Communication.csproj", "{B50A8E43-0B2B-440C-A276-4753B0C0640A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Communication", "DevQuotes.Communication\DevQuotes.Communication.csproj", "{B50A8E43-0B2B-440C-A276-4753B0C0640A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Shared", "DevQuotes.Shared\DevQuotes.Shared.csproj", "{1B637560-2FA7-4916-A9D6-C94CCC44F003}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Shared", "DevQuotes.Shared\DevQuotes.Shared.csproj", "{1B637560-2FA7-4916-A9D6-C94CCC44F003}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Exceptions", "DevQuotes.Exceptions\DevQuotes.Exceptions.csproj", "{4A277F72-12D2-4EEC-8DCE-F1BBEA76A6B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Exceptions", "DevQuotes.Exceptions\DevQuotes.Exceptions.csproj", "{4A277F72-12D2-4EEC-8DCE-F1BBEA76A6B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Application", "DevQuotes.Application\DevQuotes.Application.csproj", "{68586A6E-FDE5-41AC-9027-A621503758AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Application", "DevQuotes.Application\DevQuotes.Application.csproj", "{68586A6E-FDE5-41AC-9027-A621503758AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Api", "DevQuotes.Api\DevQuotes.Api.csproj", "{1FFFE904-01F2-42BE-9169-2C6A47577710}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevQuotes.Web", "DevQuotes.Web\DevQuotes.Web.csproj", "{38779CA2-2011-4810-9B36-7FFF4345BFF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevQuotes.Api", "DevQuotes.Api\DevQuotes.Api.csproj", "{1FFFE904-01F2-42BE-9169-2C6A47577710}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +53,6 @@ Global
 		{1FFFE904-01F2-42BE-9169-2C6A47577710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FFFE904-01F2-42BE-9169-2C6A47577710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FFFE904-01F2-42BE-9169-2C6A47577710}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38779CA2-2011-4810-9B36-7FFF4345BFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
