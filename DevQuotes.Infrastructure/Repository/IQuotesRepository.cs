@@ -7,12 +7,12 @@ namespace DevQuotes.Infrastructure.Repository
 {
     public interface IQuotesRepository
     {
-        Task AddAsync(Quote quote);
-        Task<Result> DeleteAsync(Guid id);
-        Task<PagedList<Quote>> GetAllAsync(Parameters parameters, Expression<Func<Quote, bool>>? expression = null, bool ignoreQueryFilter = false);
-        Task<Quote?> GetAsync(Guid id);
-        Task<IEnumerable<string>> GetLanguagesAsync();
-        Task<Quote?> GetRandomQuoteAsync();
-        Task UpdateAsync(Quote quote);
+        Task<Result> AddAsync(Quote quote, CancellationToken cancellationToken = default);
+        Task<Result> DeleteAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<PagedList<Quote>> GetAllAsync(Parameters parameters, Expression<Func<Quote, bool>>? expression = null, bool ignoreQueryFilter = false, CancellationToken cancellationToken = default);
+        Task<Quote?> GetAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<HashSet<string>> GetLanguagesAsync(CancellationToken cancellationToken = default);
+        Task<Quote?> GetRandomQuoteAsync(CancellationToken cancellationToken = default);
+        Task<Result> UpdateAsync(Quote quote, CancellationToken cancellationToken = default);
     }
 }

@@ -8,11 +8,12 @@ public class QuoteJsonRequest()
     private string language = default!;
     private string content = default!;
 
-    [Required]
-    [MaxLength(500)]
+    //[Required]
+    //[MaxLength(500)]
     public string Content { get => content; set => content = value.Trim(); }
-    [Required]
-    [MaxLength(25)]
+
+    //[Required]
+    //[MaxLength(25)]
     public string Language { get => language; set => language = value.Trim().ToLower(); }
 }
 

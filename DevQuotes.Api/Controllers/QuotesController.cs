@@ -42,11 +42,10 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetAllQuotesUse
     [ProducesResponseType(typeof(QuoteJsonResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<QuoteJsonResponse>> GetAsync([FromRoute]Guid qid)
+    public async Task<IActionResult> GetAsync([FromRoute]Guid qid, CancellationToken cancellationToken)
     {
-        return qid == Guid.Empty
-            ? BadRequest(new ResponseErrorJson("Invalid quote id."))
-            : Ok(await _getQuoteByIdUseCase.ExecuteAsync(qid));
+        var result = await _getQuoteByIdUseCase.ExecuteAsync(qid, cancellationToken);
+        return result.ToStatusResult(x => x);
     }
 
     /// <summary>
@@ -54,17 +53,17 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetAllQuotesUse
     /// </summary>
     [HttpGet("random")]
     [ProducesResponseType(typeof(QuoteJsonResponse), StatusCodes.Status200OK)]
-    public async Task<ActionResult<QuoteJsonResponse>> GetRandomAsync()
-        => Ok(await _getRandomQuoteUseCase.ExecuteAsync());
+    public async Task<ActionResult<QuoteJsonResponse>> GetRandomAsync(CancellationToken cancellationToken)
+        => Ok(await _getRandomQuoteUseCase.ExecuteAsync(cancellationToken));
 
     /// <summary>
     /// Get a list of quotes.
     /// </summary>
     [HttpGet]
     [ProducesResponseType(typeof(List<QuoteJsonResponse>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<QuoteJsonResponse>>> GetAllAsync([FromQuery] Parameters parameters, [FromQuery] string search = "")
+    public async Task<ActionResult<IEnumerable<QuoteJsonResponse>>> GetAllAsync([FromQuery] Parameters parameters, CancellationToken cancellationToken, [FromQuery] string search = "")
     {
-        var result = await _getQuotesUseCase.ExecuteAsync(parameters, search);
+        var result = await _getQuotesUseCase.ExecuteAsync(parameters, search, cancellationToken);
         HttpContext.SetDataToHeader<Metadata>("X-Pagination", result.Metadata);
         return Ok(result.Quotes);
     }
@@ -74,8 +73,8 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetAllQuotesUse
     /// </summary>
     [HttpGet("languages")]
     [ProducesResponseType(typeof(List<QuoteLanguageJsonResponse>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<QuoteJsonResponse>>> GetQuoteLanguagesAsync()
-        => Ok(await _getLanguagesUseCase.ExecuteAsync());
+    public async Task<ActionResult<IEnumerable<QuoteJsonResponse>>> GetQuoteLanguagesAsync(CancellationToken cancellationToken)
+        => Ok(await _getLanguagesUseCase.ExecuteAsync(cancellationToken));
 
     /// <summary>
     /// Add quote.
@@ -84,13 +83,10 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetAllQuotesUse
     [ProducesResponseType(typeof(QuoteJsonResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status409Conflict)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<QuoteJsonResponse>> AddAsync([FromBody] QuoteJsonRequest newQuote)
+    public async Task<IActionResult> AddAsync([FromBody] QuoteJsonRequest newQuote, CancellationToken cancellationToken)
     {
-        if (!ModelState.IsValid)
-            return BadRequest(new ResponseErrorJson("Error adding new quote."));
-
-        var result = await _addQuoteUseCase.ExecuteAsync(newQuote);
-        return Created(string.Empty, result);
+        var result = await _addQuoteUseCase.ExecuteAsync(newQuote, cancellationToken);
+        return result.ToStatusResult(x => x);
     }
 
     /// <summary>
@@ -101,13 +97,10 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetAllQuotesUse
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> UpdateQuote([FromRoute] Guid qid, [FromBody] QuoteJsonRequest updateQuote)
+    public async Task<IActionResult> UpdateQuote([FromRoute] Guid qid, [FromBody] QuoteJsonRequest updateQuote, CancellationToken cancellationToken)
     {
-        if (!ModelState.IsValid) 
-            return BadRequest(new ResponseErrorJson("Error updating quote."));
-
-        await _updateQuoteUseCase.ExecuteAsync(qid, updateQuote);
-        return Ok();
+        var result = await _updateQuoteUseCase.ExecuteAsync(qid, updateQuote, cancellationToken);
+        return result.ToStatusResult(x => x);
     }
 
     /// <summary>
@@ -118,9 +111,9 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetAllQuotesUse
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> RemoveAsync([FromRoute] Guid qid)
+    public async Task<IActionResult> RemoveAsync([FromRoute] Guid qid, CancellationToken cancellationToken)
     {
-        await _deleteQuoteUseCase.ExecuteAsync(qid);
-        return NoContent();
+        var result = await _deleteQuoteUseCase.ExecuteAsync(qid, cancellationToken);
+        return result.ToStatusResult(x => x);
     }
 }

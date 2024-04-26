@@ -56,18 +56,21 @@ namespace DevQuotes.Infrastructure
             }
         }
 
-        public async Task<Result> SaveAsync(bool throwsConcurrencyException = true)
+        public async Task<Result> SaveAsync(bool throwsConcurrencyException = true, CancellationToken cancellationToken = default)
         {
             try
             {
-                return await SaveChangesAsync() > 0 ?
-                            Result.Success() :
-                            Result.Fail("No changes were made.");
+                return await SaveChangesAsync(cancellationToken) > 0 
+                    ? Result.Success() 
+                    : Result.Fail("No changes were made.");
             }
             catch (DbUpdateConcurrencyException ex)
             {
                 if (throwsConcurrencyException)
+                {
                     throw;
+                }
+
                 return Result.Fail(ex.Message);
             }
             catch (DbUpdateException ex)

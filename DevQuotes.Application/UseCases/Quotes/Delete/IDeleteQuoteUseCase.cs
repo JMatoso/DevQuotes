@@ -1,8 +1,10 @@
 ﻿
+using LanguageExt.Common;
+
 namespace DevQuotes.Application.UseCases.Quotes.Delete
 {
     public interface IDeleteQuoteUseCase
     {
-        Task ExecuteAsync(Guid id);
+        Task<Result<bool>> ExecuteAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }

@@ -8,5 +8,5 @@ public class QuoteJsonResponse()
     public Guid Id { get; set; } 
     public string Content { get; set; } = default!;
     public string Language { get; set; } = default!;
-    public DateTime Created { get; set; } 
+    public DateTime Created { get; set; }
 }

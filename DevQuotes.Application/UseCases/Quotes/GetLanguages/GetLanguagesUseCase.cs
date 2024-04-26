@@ -7,11 +7,11 @@ public class GetLanguagesUseCase(IQuotesRepository quotesRepository) : IGetLangu
 {
     private readonly IQuotesRepository _quotesRepository = quotesRepository;
 
-    public async Task<QuoteLanguageJsonResponse> ExecuteAsync()
+    public async Task<QuoteLanguageJsonResponse> ExecuteAsync(CancellationToken cancellationToken = default)
     {
         return new QuoteLanguageJsonResponse()
         {
-            Languages = await _quotesRepository.GetLanguagesAsync()
+            Languages = await _quotesRepository.GetLanguagesAsync(cancellationToken)
         };
     }
 }

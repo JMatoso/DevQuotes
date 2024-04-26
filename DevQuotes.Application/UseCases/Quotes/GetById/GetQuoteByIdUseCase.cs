@@ -2,6 +2,8 @@
 using DevQuotes.Communication.Responses;
 using DevQuotes.Exceptions;
 using DevQuotes.Infrastructure.Repository;
+using LanguageExt.Common;
+using ApplicationException = DevQuotes.Exceptions.ApplicationException;
 
 namespace DevQuotes.Application.UseCases.Quotes.GetById;
 
@@ -10,17 +12,19 @@ public class GetQuoteByIdUseCase(IQuotesRepository quoteRepository, IMapper mapp
     private readonly IMapper _mapper = mapper;
     private readonly IQuotesRepository _quotesRepository = quoteRepository;
 
-    public async Task<QuoteJsonResponse> ExecuteAsync(Guid id)
+    public async Task<Result<QuoteJsonResponse>> ExecuteAsync(Guid id, CancellationToken cancellationToken = default)
     {
         if (id == Guid.Empty)
         {
-            throw new ErrorOnValidationException("Id cannot be empty");
+            var validationError = new ApplicationException();
+            validationError.AddPropertyError(nameof(id), "Id cannot be empty.");
+            return new Result<QuoteJsonResponse>(validationError);
         }
 
-        var quote = await _quotesRepository.GetAsync(id);
+        var quote = await _quotesRepository.GetAsync(id, cancellationToken);
 
         return quote == null
-            ? throw new NotFoundException("Quote not found")
+            ? new Result<QuoteJsonResponse>(new ApplicationException("Quote not found.", ExceptionTypes.NotFound))
             : _mapper.Map<QuoteJsonResponse>(quote);
     }
 }

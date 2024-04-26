@@ -4,6 +4,6 @@ namespace DevQuotes.Application.UseCases.Quotes.GetLanguages
 {
     public interface IGetLanguagesUseCase
     {
-        Task<QuoteLanguageJsonResponse> ExecuteAsync();
+        Task<QuoteLanguageJsonResponse> ExecuteAsync(CancellationToken cancellationToken = default);
     }
 }

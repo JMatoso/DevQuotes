@@ -25,8 +25,6 @@ public static class ServiceExtensions
             });
         }
 
-        services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
-
         services.AddRouting(options => options.LowercaseUrls = true);
 
         services.AddScoped<IQuotesRepository, QuotesRepository>();

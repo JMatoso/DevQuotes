@@ -4,6 +4,6 @@ namespace DevQuotes.Application.UseCases.Quotes.GetRandom
 {
     public interface IGetRandomQuoteUseCase
     {
-        Task<QuoteJsonResponse> ExecuteAsync();
+        Task<QuoteJsonResponse> ExecuteAsync(CancellationToken cancellationToken = default);
     }
 }

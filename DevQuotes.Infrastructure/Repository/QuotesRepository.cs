@@ -11,22 +11,23 @@ public class QuotesRepository(ApplicationDbContext dbContext) : IQuotesRepositor
     private readonly Random _random = new();
     private readonly ApplicationDbContext _dbContext = dbContext;
 
-    public async Task<Quote?> GetAsync(Guid id) => await _dbContext.Quotes.FindAsync(id);
+    public async Task<Quote?> GetAsync(Guid id, CancellationToken cancellationToken = default)
+        => await _dbContext.Quotes.FindAsync([id, cancellationToken], cancellationToken: cancellationToken);
 
-    public async Task<Quote?> GetRandomQuoteAsync()
+    public async Task<Quote?> GetRandomQuoteAsync(CancellationToken cancellationToken = default)
     {
         var quotes = _dbContext.Quotes.OrderByDescending(x => x.Created).AsNoTracking();
 
         if (FakeCache.CanRefreshCache)
         {
-            FakeCache.Count = await quotes.CountAsync();
+            FakeCache.Count = await quotes.CountAsync(cancellationToken);
             FakeCache.LastUpdate = DateTime.UtcNow;
         }
 
-        return await quotes.Skip(_random.Next(FakeCache.Count)).FirstOrDefaultAsync();
+        return await quotes.Skip(_random.Next(FakeCache.Count)).FirstOrDefaultAsync(cancellationToken);
     }
 
-    public async Task<PagedList<Quote>> GetAllAsync(Parameters parameters, Expression<Func<Quote, bool>>? expression = null, bool ignoreQueryFilter = false)
+    public async Task<PagedList<Quote>> GetAllAsync(Parameters parameters, Expression<Func<Quote, bool>>? expression = null, bool ignoreQueryFilter = false, CancellationToken cancellationToken = default)
     {
         var query = _dbContext.Quotes.OrderByDescending(x => x.Created).AsNoTracking();
 
@@ -40,42 +41,44 @@ public class QuotesRepository(ApplicationDbContext dbContext) : IQuotesRepositor
             query = query.IgnoreQueryFilters();
         }
 
-        return await PagedList<Quote>.ToPagedList(query, parameters.Page, parameters.Limit);
+        return await PagedList<Quote>.ToPagedList(query, parameters.Page, parameters.Limit, cancellationToken);
     }
 
-    public async Task AddAsync(Quote quote)
+    public async Task<Result> AddAsync(Quote quote, CancellationToken cancellationToken = default)
     {
-        await _dbContext.Quotes.AddAsync(quote);
-        await _dbContext.SaveAsync();
+        await _dbContext.Quotes.AddAsync(quote, cancellationToken);
+        return await _dbContext.SaveAsync(cancellationToken: cancellationToken);
     }
 
-    public async Task UpdateAsync(Quote quote)
+    public async Task<Result> UpdateAsync(Quote quote, CancellationToken cancellationToken = default)
     {
         _dbContext.Quotes.Update(quote);
-        await _dbContext.SaveAsync();
+        return await _dbContext.SaveAsync(cancellationToken: cancellationToken);
     }
 
-    public async Task<Result> DeleteAsync(Guid id)
+    public async Task<Result> DeleteAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        var quote = await GetAsync(id);
+        var quote = await GetAsync(id, cancellationToken);
 
         if (quote is null)
-            return Result.Fail("Quote not found");
+        {
+            return Result.Fail(nameof(id), "Quote not found.");
+        }
 
         quote.Delete();
-        await UpdateAsync(quote);
+        await UpdateAsync(quote, cancellationToken);
         return Result.Success();
     }
 
-    public async Task<IEnumerable<string>> GetLanguagesAsync()
+    public async Task<HashSet<string>> GetLanguagesAsync(CancellationToken cancellationToken = default)
     {
         var result = await _dbContext.Quotes.AsNoTracking()
                 .OrderBy(x => x.Language)
                 .Where(x => !string.IsNullOrWhiteSpace(x.Language))
                 .Select(x => x.Language.ToLower())
-                .ToListAsync();
+                .ToListAsync(cancellationToken);
 
-        return result.Distinct();
+        return result.Distinct().ToHashSet();
     }
 }
 

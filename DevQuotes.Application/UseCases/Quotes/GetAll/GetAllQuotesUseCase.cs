@@ -10,11 +10,11 @@ public class GetAllQuotesUseCase(IQuotesRepository quotesRepository, IMapper map
     private readonly IMapper _mapper = mapper;
     private readonly IQuotesRepository _quotesRepository = quotesRepository;
 
-    public async Task<ListQuoteJsonResponse> ExecuteAsync(Parameters parameters, string keyword = "")
+    public async Task<ListQuoteJsonResponse> ExecuteAsync(Parameters parameters, string keyword = "", CancellationToken cancellationToken = default)
     {
         string search = keyword.ToLower().Trim();
         var quotes = await _quotesRepository.GetAllAsync(parameters, x => x.Language.ToLower().Contains(search)
-                            || x.Content.ToLower().Contains(search));
+                            || x.Content.ToLower().Contains(search), cancellationToken: cancellationToken);
 
         return new ListQuoteJsonResponse()
         {

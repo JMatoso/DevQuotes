@@ -1,10 +1,11 @@
 ﻿using DevQuotes.Communication.Requests;
 using DevQuotes.Communication.Responses;
+using LanguageExt.Common;
 
 namespace DevQuotes.Application.UseCases.Quotes.Add
 {
     public interface IAddQuoteUseCase
     {
-        Task<QuoteJsonResponse> ExecuteAsync(QuoteJsonRequest newQuote);
+        Task<Result<QuoteJsonResponse>> ExecuteAsync(QuoteJsonRequest newQuote, CancellationToken cancellationToken = default);
     }
 }

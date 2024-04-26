@@ -1,9 +1,10 @@
 ﻿using DevQuotes.Communication.Responses;
+using LanguageExt.Common;
 
 namespace DevQuotes.Application.UseCases.Quotes.GetById
 {
     public interface IGetQuoteByIdUseCase
     {
-        Task<QuoteJsonResponse> ExecuteAsync(Guid id);
+        Task<Result<QuoteJsonResponse>> ExecuteAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }
