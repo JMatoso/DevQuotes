@@ -8,13 +8,13 @@ EXPOSE 10000
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["../DevQuotes.Api/DevQuotes.Api.csproj", "DevQuotes.Api/"]
-COPY ["../DevQuotes.Application/DevQuotes.Application.csproj", "DevQuotes.Application/"]
-COPY ["../DevQuotes.Communication/DevQuotes.Communication.csproj", "DevQuotes.Communication/"]
-COPY ["../DevQuotes.Shared/DevQuotes.Shared.csproj", "DevQuotes.Shared/"]
-COPY ["../DevQuotes.Domain/DevQuotes.Domain.csproj", "DevQuotes.Domain/"]
-COPY ["../DevQuotes.Exceptions/DevQuotes.Exceptions.csproj", "DevQuotes.Exceptions/"]
-COPY ["../DevQuotes.Infrastructure/DevQuotes.Infrastructure.csproj", "DevQuotes.Infrastructure/"]
+COPY ["DevQuotes.Api/DevQuotes.Api.csproj", "DevQuotes.Api/"]
+COPY ["DevQuotes.Application/DevQuotes.Application.csproj", "DevQuotes.Application/"]
+COPY ["DevQuotes.Communication/DevQuotes.Communication.csproj", "DevQuotes.Communication/"]
+COPY ["DevQuotes.Shared/DevQuotes.Shared.csproj", "DevQuotes.Shared/"]
+COPY ["DevQuotes.Domain/DevQuotes.Domain.csproj", "DevQuotes.Domain/"]
+COPY ["DevQuotes.Exceptions/DevQuotes.Exceptions.csproj", "DevQuotes.Exceptions/"]
+COPY ["DevQuotes.Infrastructure/DevQuotes.Infrastructure.csproj", "DevQuotes.Infrastructure/"]
 RUN dotnet restore "./DevQuotes.Api/DevQuotes.Api.csproj"
 COPY . .
 WORKDIR "/src/DevQuotes.Api"
