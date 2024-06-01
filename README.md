@@ -1,6 +1,6 @@
 # DevQuotes
 
-<p>Code-based quote api.</p>
+Code-based quote api.
 See the documentation here: [Swagger](https://api-devquotes.onrender.com/swagger/index.html)
 
 ## Table of Contents
