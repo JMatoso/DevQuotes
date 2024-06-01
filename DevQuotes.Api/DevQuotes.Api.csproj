@@ -11,11 +11,14 @@
 		<NoWarn>$(NoWarn);1591</NoWarn>
 		<NoWarn>$(NoWarn);1572</NoWarn>
 		<NoWarn>$(NoWarn);1573</NoWarn>
+		<UserSecretsId>4569fe26-54c0-4870-813f-0d7b7421dad4</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0" />
     <PackageReference Include="LanguageExt.Core" Version="4.4.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 

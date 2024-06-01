@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace DevQuotes.Communication.Responses;
+﻿namespace DevQuotes.Communication.Responses;
 
 public class ResponseErrorJson(string message, IEnumerable<object> errors)
 {

@@ -1,6 +1,5 @@
 ﻿using DevQuotes.Infrastructure.Repository;
 using Microsoft.Extensions.DependencyInjection;
-using DevQuotes.Infrastructure.Filters;
 using Microsoft.Extensions.Configuration;
 using DevQuotes.Infrastructure.Options;
 
@@ -19,7 +18,13 @@ public static class ServiceExtensions
                 options.AddPolicy(corsOptions.PolicyName, builder =>
                 {
                     builder.AllowAnyOrigin().WithMethods("GET");
-                    builder.WithOrigins(corsOptions.AllowedOrigins).WithMethods("POST", "GET", "PUT", "DELETE");
+
+                    if (corsOptions.AllowedOrigins is not [] || corsOptions.AllowedOrigins is not null)
+                    {
+                        builder.WithOrigins(corsOptions.AllowedOrigins)
+                               .WithMethods("POST", "GET", "PUT", "DELETE"); 
+                    }
+
                     builder.AllowAnyHeader();
                 });
             });
