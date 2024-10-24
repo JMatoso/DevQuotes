@@ -14,6 +14,8 @@ public static class PipelineExtensions
 
         app.UseHttpsRedirection();
 
+        app.UseStaticFiles();
+
         app.UseAuthorization();
         app.UseAuthentication();
 

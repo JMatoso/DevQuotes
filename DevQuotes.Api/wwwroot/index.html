@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Coding Quotes API - Inspiring Quotes for Developers & Tech Enthusiasts</title>
+
+    <meta name="description" content="Explore a curated collection of inspiring and motivational quotes for programmers, developers, and technology enthusiasts with Coding Quotes API. Easily integrate these quotes into your web applications, blogs, dashboards, or mobile apps.">
+    <meta name="keywords" content="coding quotes, DevQuotes, dev, developer quotes, tech quotes, programming, technology, API, motivational quotes, software development, Coding Quotes API">
+    <meta name="author" content="DevQuotes Team">
+    <meta name="abstract" content="Get inspirational quotes about coding, technology, and software development with Coding Quotes API.">
+    <meta name="coverage" content="Worldwide">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+
+    <base href="/">
+    <meta name="robots" content="index, follow, noodp, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <meta property="og:url" content="https://api-devquotes.onrender.com/">
+    <meta property="og:image" content="https://api-devquotes.onrender.com/banner.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DevQuotes - Inspiring Quotes for Developers & Tech Enthusiasts">
+    <meta property="og:description" content="Discover and integrate inspiring coding quotes into your web apps, blogs, or mobile apps. Perfect for developers and technology enthusiasts.">
+    <meta property="og:site_name" content="DevQuotes">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="DevQuotes Team">
+
+    <meta name="twitter:description" content="Explore and integrate inspiring coding quotes into your apps or blogs with the Coding Quotes API. Ideal for developers and tech enthusiasts.">
+    <meta name="twitter:title" content="DevQuotes - Inspiring Quotes for Developers & Tech Enthusiasts">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CodingQuotesAPI">
+    <meta name="twitter:creator" content="@CodingQuotesAPI">
+    <meta name="twitter:url" content="https://api-devquotes.onrender.com/">
+    <meta name="twitter:image" content="https://api-devquotes.onrender.com/banner.jpg">
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <meta name="theme-color" content="#0A0A0A" />
+    <meta name="msapplication-navbutton-color" content="#0A0A0A" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0A0A0A" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .centered-div {
+            width: 60%;
+            height: 100vh;
+            white-space: pre-wrap;
+        }
+
+        .typed-cursor {
+            display: inline-block;
+        }
+    </style>
+
+    <div class="container d-flex justify-content-center align-items-center centered-div">
+        <div>
+            <pre><code id="typed-output" class="bg-transparent"></code></pre>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/javascript.min.js"></script>
+
+    <script>
+        let typed;
+
+        function formatContent(content) {
+            const contentWithLineBreak = `\n${content}`;
+
+            const formattedContent = contentWithLineBreak
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/\t/g, '    ')
+                .replace(/\n/g, '<br>');
+
+            return [formattedContent];
+        }
+
+        async function fetchAndDisplayQuote() {
+            try {
+                const response = await fetch('/api/v1/quotes/random');
+                const data = await response.json();
+
+                const content = formatContent(data.content);
+
+                if (typed) {
+                    typed.destroy();
+                }
+
+                typed = new Typed('#typed-output', {
+                    strings: content,
+                    typeSpeed: 40,
+                    backSpeed: 30,
+                    backDelay: 500,
+                    loop: false,
+                    loopCount: 0,
+                    showCursor: true,
+                    cursorChar: '|',
+                    contentType: 'html',
+                    onStringTyped: function () {
+                        document.querySelectorAll('pre code').forEach((block) => {
+                            hljs.highlightElement(block);
+                        });
+                    },
+                    onComplete: function () {
+                        setTimeout(() => {
+                            fetchAndDisplayQuote();
+                        }, 2000);
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        fetchAndDisplayQuote();
+    </script>
+</body>
+</html>

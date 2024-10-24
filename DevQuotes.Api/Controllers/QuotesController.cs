@@ -29,6 +29,14 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetQuotesUseCas
     private readonly IDeleteQuoteUseCase _deleteQuoteUseCase = deleteQuoteUseCase;
     private readonly IUpdateQuoteUseCase _updateQuoteUseCase = updateQuoteUseCase;
 
+    [HttpGet("/")]
+    [HttpGet("/home")]
+    [HttpGet("/index")]
+    public IActionResult Index()
+    {
+        return Redirect("/index.html");
+    }
+
     /// <summary>
     /// Get a random quote (from a specific programming language).
     /// </summary>
