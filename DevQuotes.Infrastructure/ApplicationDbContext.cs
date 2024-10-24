@@ -5,93 +5,109 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace DevQuotes.Infrastructure
+namespace DevQuotes.Infrastructure;
+
+public class ApplicationDbContext : DbContext
 {
-    public class ApplicationDbContext : DbContext
+    private readonly ILogger<ApplicationDbContext> _logger;
+
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, ILogger<ApplicationDbContext> logger) 
+        : base(options)
     {
-        public DbSet<Quote> Quotes => Set<Quote>();
+        _logger = logger;
+        Database.EnsureCreated();
+        SeedQuotes();
+    }
 
-        private readonly ILogger<ApplicationDbContext> _logger;
+    public DbSet<Quote> Quotes => Set<Quote>();
+    public DbSet<Language> Languages => Set<Language>();
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, ILogger<ApplicationDbContext> logger) 
-            : base(options)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Quote>(entity =>
         {
-            _logger = logger;
-            Database.EnsureCreated();
-            SeedQuotes();
+            entity.HasIndex(e => e.Content);
+            entity.HasQueryFilter(e => !e.IsDeleted);
+            entity.HasOne(e => e.Language)
+                .WithMany(e => e.Quotes)
+                .HasForeignKey(e => e.LanguageId)
+                .OnDelete(DeleteBehavior.NoAction);
+        });
+
+        modelBuilder.Entity<Language>(entity =>
+        {
+            entity.HasIndex(e => e.Name);
+            entity.HasIndex(e => e.Code);
+            entity.HasIndex(e => new { e.Name, e.Code }).IsUnique();
+            entity.HasQueryFilter(e => !e.IsDeleted);
+        });
+
+        base.OnModelCreating(modelBuilder);
+    }
+
+    private void SeedQuotes()
+    {
+        if (Quotes.Any())
+        {
+            return;
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // fix seed file path
+
+        var seedFilePath = Path.Combine(Directory.GetCurrentDirectory(), "quotes.v2.json");
+
+        if (File.Exists(seedFilePath))
         {
-            modelBuilder.Entity<Quote>(entity =>
+            string fileContent = File.ReadAllText(seedFilePath);
+            var oldQuotes = JsonConvert.DeserializeObject<List<QuoteRequest>>(fileContent) ?? [];
+
+            oldQuotes.ForEach((item) =>
             {
-                entity.HasQueryFilter(e => !e.IsDeleted);
-                entity.HasIndex(e => new { e.Content, e.Language });
+                Quotes.Add(new Quote()
+                {
+                    Content = item.Content
+                });
             });
 
-            base.OnModelCreating(modelBuilder);
+            SaveChanges();
         }
+    }
 
-        private void SeedQuotes()
+    public async Task<Result> SaveAsync(bool throwsConcurrencyException = true, CancellationToken cancellationToken = default)
+    {
+        try
         {
-            if (Quotes.Any()) return;
-
-            var seedFilePath = Path.Combine(Directory.GetCurrentDirectory(), "quotes.v2.json");
-
-            if (File.Exists(seedFilePath))
-            {
-                string fileContent = File.ReadAllText(seedFilePath);
-                var oldQuotes = JsonConvert.DeserializeObject<List<QuoteJsonRequest>>(fileContent) ?? [];
-
-                oldQuotes.ForEach((item) =>
-                {
-                    Quotes.Add(new Quote()
-                    {
-                        Content = item.Content,
-                        Language = item.Language
-                    });
-                });
-
-                SaveChanges();
-            }
+            return await SaveChangesAsync(cancellationToken) > 0 
+                ? Result.Success() 
+                : Result.Fail("No changes were made.");
         }
-
-        public async Task<Result> SaveAsync(bool throwsConcurrencyException = true, CancellationToken cancellationToken = default)
+        catch (DbUpdateConcurrencyException ex)
         {
-            try
+            if (throwsConcurrencyException)
             {
-                return await SaveChangesAsync(cancellationToken) > 0 
-                    ? Result.Success() 
-                    : Result.Fail("No changes were made.");
+                throw;
             }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                if (throwsConcurrencyException)
-                {
-                    throw;
-                }
 
-                return Result.Fail(ex.Message);
-            }
-            catch (DbUpdateException ex)
-            {
-                _logger.LogError(ex, "Error saving AppDbContext.SaveAsync()");
+            return Result.Fail(ex.Message);
+        }
+        catch (DbUpdateException ex)
+        {
+            _logger.LogError(ex, "Error saving AppDbContext.SaveAsync()");
 #if DEBUG
-                return Result.Fail(ex.ToString());
+            return Result.Fail(ex.ToString());
 #else
-                return Result.Fail(ex.Message);
+            return Result.Fail(ex.Message);
 #endif
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error saving AppDbContext.SaveAsync()");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error saving AppDbContext.SaveAsync()");
 
 #if DEBUG
-                return Result.Fail(ex.ToString());
+            return Result.Fail(ex.ToString());
 #else
-                return Result.Fail(ex.Message);
+            return Result.Fail(ex.Message);
 #endif
-            }
         }
     }
 }

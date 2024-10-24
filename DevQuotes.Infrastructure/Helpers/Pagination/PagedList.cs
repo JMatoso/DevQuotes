@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DevQuotes.Infrastructure.Helpers.Pagination;
 
-public class PagedList<TEntity> : List<TEntity>
+public sealed class PagedList<TEntity> : List<TEntity>
 {
     public Metadata Metadata { get; set; }
     public PagedList(List<TEntity> items, int count, int pageNumber, int pageSize)

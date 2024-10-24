@@ -1,8 +1,6 @@
-﻿using System.Collections;
+﻿namespace DevQuotes.Exceptions;
 
-namespace DevQuotes.Exceptions;
-
-public class ApplicationException : Exception
+public sealed class ApplicationException : Exception
 {
     public ApplicationException(string message = "A few validation errors ocurred.", ExceptionTypes exceptionType = ExceptionTypes.BadRequest) 
         : base(message)

@@ -2,19 +2,19 @@
 using DevQuotes.Application.Extensions;
 using DevQuotes.Communication.Requests;
 using DevQuotes.Exceptions;
-using DevQuotes.Infrastructure.Repository.Quotes;
+using DevQuotes.Infrastructure.Repository.Languages;
 using LanguageExt.Common;
 using ApplicationException = DevQuotes.Exceptions.ApplicationException;
 
-namespace DevQuotes.Application.UseCases.Quotes.Update;
+namespace DevQuotes.Application.UseCases.Languages.Update;
 
-public sealed class UpdateQuoteUseCase(IQuotesRepository quotesRepository, IMapper mapper) : IUpdateQuoteUseCase
+public sealed class UpdateLanguageUseCase(ILanguagesRepository languagesRepository, IMapper mapper) : IUpdateLanguageUseCase
 {
     private readonly IMapper _mapper = mapper;
-    private readonly IQuotesRepository _quotesRepository = quotesRepository;
-    private readonly QuoteJsonRequestValidator _validator = new();
+    private readonly ILanguagesRepository _languagesRepository = languagesRepository;
+    private readonly LanguageRequestValidator _validator = new();
 
-    public async Task<Result<bool>> ExecuteAsync(Guid id, QuoteRequest quote, CancellationToken cancellationToken = default)
+    public async Task<Result<bool>> ExecuteAsync(Guid id, LanguageRequest language, CancellationToken cancellationToken = default)
     {
         if (id == Guid.Empty)
         {
@@ -23,13 +23,13 @@ public sealed class UpdateQuoteUseCase(IQuotesRepository quotesRepository, IMapp
             return new Result<bool>(validationError);
         }
 
-        var quoteToUpdate = await _quotesRepository.FindAsync(id, cancellationToken);
-        if (quoteToUpdate is null)
+        var languageToUpdate = await _languagesRepository.FindAsync(id, cancellationToken);
+        if (languageToUpdate is null)
         {
-            return new Result<bool>(new ApplicationException("Quote not found", ExceptionTypes.NotFound));
+            return new Result<bool>(new ApplicationException("Language not found", ExceptionTypes.NotFound));
         }
 
-        var validationResult = await _validator.ValidateAsync(quote, cancellationToken);
+        var validationResult = await _validator.ValidateAsync(language, cancellationToken);
         if (!validationResult.IsValid)
         {
             var validationErrors = new ApplicationException();
@@ -37,8 +37,8 @@ public sealed class UpdateQuoteUseCase(IQuotesRepository quotesRepository, IMapp
             return new Result<bool>(validationErrors);
         }
 
-        _ = _mapper.Map(quote, quoteToUpdate);
-        var result = await _quotesRepository.UpdateAsync(quoteToUpdate, cancellationToken);
+        _ = _mapper.Map(language, languageToUpdate);
+        var result = await _languagesRepository.UpdateAsync(languageToUpdate, cancellationToken);
 
         if (!result.Succeeded)
         {

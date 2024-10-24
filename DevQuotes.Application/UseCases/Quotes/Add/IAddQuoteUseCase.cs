@@ -6,6 +6,6 @@ namespace DevQuotes.Application.UseCases.Quotes.Add
 {
     public interface IAddQuoteUseCase
     {
-        Task<Result<QuoteJsonResponse>> ExecuteAsync(QuoteJsonRequest newQuote, CancellationToken cancellationToken = default);
+        Task<Result<QuoteResponse>> ExecuteAsync(QuoteRequest newQuote, CancellationToken cancellationToken = default);
     }
 }

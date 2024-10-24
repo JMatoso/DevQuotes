@@ -4,25 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DevQuotes.Domain.Entities;
 
 [Table("Quotes")]
-public class Quote
+public class Quote : BaseEntity
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public Guid Id { get; private set; }
+    [Required]
+    [StringLength(2500)]
+    public string Content { get; set; } = string.Empty;
 
     [Required]
-    [StringLength(500)]
-    [DataType(DataType.MultilineText)]
-    public string Content { get; set; } = default!;
+    public Guid? LanguageId { get; set; }
 
-    public bool IsDeleted { get; private set; }
-
-    [Required]
-    [StringLength(25)]
-    public string Language { get; set; } = default!;
-
-    [DataType(DataType.DateTime)]
-    public DateTime Created { get; private set; } = DateTime.UtcNow;
-
-    public void Delete() => IsDeleted = true;   
+    [ForeignKey(nameof(LanguageId))]
+    public virtual Language Language { get; set; } = default!;   
 }

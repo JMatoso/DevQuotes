@@ -5,12 +5,15 @@ using DevQuotes.Domain.Entities;
 
 namespace DevQuotes.Application.Mapping;
 
-public class MappingProfiles : Profile
+public sealed class MappingProfiles : Profile
 {
     public MappingProfiles()
     {
-        CreateMap<QuoteJsonRequest, Quote>();
-        CreateMap<Quote, QuoteJsonResponse>();
-        CreateMap<QuoteJsonRequest, QuoteJsonResponse>().ReverseMap();
+        CreateMap<QuoteRequest, Quote>();
+        CreateMap<Quote, QuoteResponse>();
+        CreateMap<QuoteRequest, QuoteResponse>().ReverseMap();
+
+        CreateMap<LanguageRequest, Language>();
+        CreateMap<Language, LanguageResponse>();
     }
 }

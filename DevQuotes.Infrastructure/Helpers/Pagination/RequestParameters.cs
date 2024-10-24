@@ -19,4 +19,4 @@ public abstract class RequestParameters
     }
 }
 
-public class Parameters : RequestParameters { }
+public sealed class PaginationParameters : RequestParameters { }

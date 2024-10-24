@@ -5,6 +5,6 @@ namespace DevQuotes.Application.UseCases.Quotes.Update
 {
     public interface IUpdateQuoteUseCase
     {
-        Task<Result<bool>> ExecuteAsync(Guid id, QuoteJsonRequest quote, CancellationToken cancellationToken = default);
+        Task<Result<bool>> ExecuteAsync(Guid id, QuoteRequest quote, CancellationToken cancellationToken = default);
     }
 }

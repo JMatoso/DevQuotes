@@ -1,9 +1,10 @@
-﻿using DevQuotes.Application.UseCases.Quotes.Add;
+﻿using DevQuotes.Application.UseCases.Languages.Add;
+using DevQuotes.Application.UseCases.Languages.Delete;
+using DevQuotes.Application.UseCases.Languages.Get;
+using DevQuotes.Application.UseCases.Languages.Update;
+using DevQuotes.Application.UseCases.Quotes.Add;
 using DevQuotes.Application.UseCases.Quotes.Delete;
-using DevQuotes.Application.UseCases.Quotes.GetAll;
-using DevQuotes.Application.UseCases.Quotes.GetById;
-using DevQuotes.Application.UseCases.Quotes.GetLanguages;
-using DevQuotes.Application.UseCases.Quotes.GetRandom;
+using DevQuotes.Application.UseCases.Quotes.Get;
 using DevQuotes.Application.UseCases.Quotes.Update;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,11 +20,13 @@ public static class ApplicationExtensions
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
         services.AddScoped<IAddQuoteUseCase, AddQuoteUseCase>();
-        services.AddScoped<IGetRandomQuoteUseCase, GetRandomQuoteUseCase>();
+        services.AddScoped<IGetQuotesUseCase,  GetQuotesUseCase>();
         services.AddScoped<IDeleteQuoteUseCase, DeleteQuoteUseCase>();
-        services.AddScoped<IGetAllQuotesUseCase, GetAllQuotesUseCase>();
         services.AddScoped<IUpdateQuoteUseCase, UpdateQuoteUseCase>();
-        services.AddScoped<IGetQuoteByIdUseCase,  GetQuoteByIdUseCase>();
+
+        services.AddScoped<IAddLanguageUseCase, AddLanguageUseCase>();
         services.AddScoped<IGetLanguagesUseCase, GetLanguagesUseCase>();
+        services.AddScoped<IDeleteLanguageUseCase, DeleteLanguageUseCase>();
+        services.AddScoped<IUpdateLanguageUseCase, UpdateLanguageUseCase>();
     }
 }

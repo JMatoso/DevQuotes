@@ -11,12 +11,16 @@ public static class SwaggerExtensions
         {
             config.SwaggerDoc($"v1", new OpenApiInfo
             {
-                Title = "DevQuotes",
+                Title = "DevQuotes API",
                 Version = $"v1",
-                Description = "Coding quotes API.",
+                Description = @"The Coding Quotes API provides a curated collection of inspiring 
+                                and motivational quotes tailored for programmers, developers, and 
+                                technology enthusiasts. With a simple and efficient integration, this API 
+                                allows you to retrieve quotes about programming, software development, and technology, 
+                                ready to be displayed in web applications, blogs, dashboards, or even mobile apps.",
                 Contact = new OpenApiContact
                 {
-                    Name = "DevQuotes",
+                    Name = "José Matoso",
                     Email = "joaquimjose@duck.com",
                     Url = new Uri("https://codequotes-nine.vercel.app/")
                 },

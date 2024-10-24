@@ -1,12 +1,12 @@
-﻿using DevQuotes.Infrastructure.Repository.Quotes;
+﻿using DevQuotes.Infrastructure.Repository.Languages;
 using LanguageExt.Common;
 using ApplicationException = DevQuotes.Exceptions.ApplicationException;
 
-namespace DevQuotes.Application.UseCases.Quotes.Delete;
+namespace DevQuotes.Application.UseCases.Languages.Delete;
 
-public sealed class DeleteQuoteUseCase(IQuotesRepository quotesRepository) : IDeleteQuoteUseCase
+public sealed class DeleteLanguageUseCase(ILanguagesRepository languageRepository) : IDeleteLanguageUseCase
 {
-    private readonly IQuotesRepository _quotesRepository = quotesRepository;
+    private readonly ILanguagesRepository _languageRepository = languageRepository;
 
     public async Task<Result<bool>> ExecuteAsync(Guid id, CancellationToken cancellationToken = default)
     {
@@ -17,7 +17,7 @@ public sealed class DeleteQuoteUseCase(IQuotesRepository quotesRepository) : IDe
             return new Result<bool>(validationError);
         }
 
-        var result = await _quotesRepository.DeleteAsync(id, cancellationToken);
+        var result = await _languageRepository.DeleteAsync(id, cancellationToken);
 
         if (!result.Succeeded)
         {

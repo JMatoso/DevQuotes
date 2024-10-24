@@ -1,7 +1,8 @@
-﻿using DevQuotes.Infrastructure.Repository;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using DevQuotes.Infrastructure.Options;
+using DevQuotes.Infrastructure.Repository.Quotes;
+using DevQuotes.Infrastructure.Repository.Languages;
 
 namespace DevQuotes.Infrastructure.Extensions;
 
@@ -33,5 +34,6 @@ public static class ServiceExtensions
         services.AddRouting(options => options.LowercaseUrls = true);
 
         services.AddScoped<IQuotesRepository, QuotesRepository>();
+        services.AddScoped<ILanguagesRepository, LanguagesRepository>();
     }
 }

@@ -11,13 +11,14 @@ public static class DbContextExtensions
     {
         services.AddDbContextFactory<ApplicationDbContext>(options =>
         {
+            options.UseLazyLoadingProxies();
             options.UseSqlite(configuration.GetConnectionString("DefaultConnection"), cfg =>
                 cfg.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName));
 
 #if DEBUG
             options.EnableSensitiveDataLogging();
+            options.EnableDetailedErrors();
 #endif
-
         });
     }
 }

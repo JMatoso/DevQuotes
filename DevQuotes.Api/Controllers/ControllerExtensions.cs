@@ -2,8 +2,6 @@
 using LanguageExt.Common;
 using DevQuotes.Exceptions;
 using DevQuotes.Communication.Responses;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 using System.Collections;
 
 namespace DevQuotes.Api.Controllers;
@@ -21,7 +19,7 @@ public static class ControllerExtensions
         {
             _ = Enum.TryParse(exception.Source, out ExceptionTypes exceptionType);
 
-            if (exceptionType == ExceptionTypes.Unknown)
+            if (exceptionType is ExceptionTypes.Unknown)
             {
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
