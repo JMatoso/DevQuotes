@@ -1,4 +1,5 @@
 ﻿using DevQuotes.Communication.Responses;
+using DevQuotes.Domain.Entities;
 using DevQuotes.Exceptions;
 using DevQuotes.Infrastructure.Repository.Languages;
 using LanguageExt.Common;
@@ -15,21 +16,14 @@ public sealed class GetLanguagesUseCase(ILanguagesRepository languageRepository)
         return await _languageRepository.GetAsync(cancellationToken);
     }
 
-    public async Task<Result<LanguageResponse>> ExecuteAsync(Guid id, bool includeQuotes, CancellationToken cancellationToken = default)
+    public async Task<Language?> ExecuteAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        if (id == Guid.Empty)
-        {
-            var validationError = new ApplicationException();
-            validationError.AddPropertyError(nameof(id), "Id cannot be empty.");
-            return new Result<LanguageResponse>(validationError);
-        }
-
-        return GetResult(await _languageRepository.GetAsync(id, includeQuotes, cancellationToken));
+        return await _languageRepository.FindAsync(id, cancellationToken);
     }
 
-    public async Task<Result<LanguageResponse>> ExecuteAsync(string name, string code, CancellationToken cancellationToken = default)
+    public async Task<Result<LanguageResponse>> ExecuteAsync(string code, CancellationToken cancellationToken = default)
     {
-        return GetResult(await _languageRepository.GetByAsync(name, code, cancellationToken));
+        return GetResult(await _languageRepository.GetByAsync(code, cancellationToken));
     }
 
     private static Result<LanguageResponse> GetResult(LanguageResponse? language)

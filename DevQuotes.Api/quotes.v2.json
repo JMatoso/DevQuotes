@@ -1,394 +1,447 @@
 [
   {
-    "Content": "new Lesson(mistake);",
-    "Language": "csharp"
-  },
-  {
-    "Content": "void Overthinking(){\n\tOverthinking();\n}",
-    "Language": "java"
-  },
-  {
-    "Content": "work.getInstancefrom(passion);",
-    "Language": "js"
-  },
-  {
-    "Content": "quarantine.restrictions--;",
-    "Language": "js"
-  },
-  {
-    "Content": "stressManager.reduce();",
-    "Language": "js"
-  },
-  {
-    "Content": "new Inspiration(ideas);",
-    "Language": "csharp"
-  },
-  {
-    "Content": "const exams = university.getRest().Revise().Relax();",
-    "Language": "js"
-  },
-  {
-    "Content": "sleep--;\nproductivity++;",
-    "Language": "go"
-  },
-  {
-    "Content": "import {luck} from life;",
-    "Language": "python"
-  },
-  {
-    "Content": "Happy 11111100110;",
-    "Language": "byte"
-  },
-  {
-    "Content": "getPurpose();",
-    "Language": "js"
-  },
-  {
-    "Content": "new luck(work, consistency);",
-    "Language": "java"
-  },
-  {
-    "Content": "study.then(practice());",
-    "Language": "js"
-  },
-  {
-    "Content": "stayHome();",
-    "Language": "js"
-  },
-  {
-    "Content": "new Day(optimism);",
-    "Language": "swift"
-  },
-  {
-    "Content": "doubt.terminate();",
-    "Language": "js"
-  },
-  {
-    "Content": "clearYourMind();",
-    "Language": "js"
-  },
-  {
-    "Content": "await sign",
-    "Language": "js"
-  },
-  {
-    "Content": "alert('Be Grateful');",
-    "Language": "js"
-  },
-  {
-    "Content": "action.take(Time.now());",
-    "Language": "js"
-  },
-  {
-    "Content": "new Skill(desire, time);",
-    "Language": "kotlin"
-  },
-  {
-    "Content": "believe();",
-    "Language": "js"
-  },
-  {
-    "Content": "console.log(autodidacticism);\nconsole.log(autodidacticism == selfEducation);\n//Outputs 1",
-    "Language": "js"
-  },
-  {
-    "Content": "memories.push(today);",
-    "Language": "js"
-  },
-  {
-    "Content": "new Chance();",
-    "Language": "csharp"
-  },
-  {
-    "Content": "new Day(hope);",
-    "Language": "kotlin"
-  },
-  {
-    "Content": "self.respect();",
-    "Language": "js"
-  },
-  {
-    "Content": "setGoal(name, time, significance);",
-    "Language": "java"
-  },
-  {
-    "Content": "self.getReflection();",
-    "Language": "python"
-  },
-  {
-    "Content": "priorities.sort();",
-    "Language": "js"
-  },
-  {
-    "Content": "cout<< past == future << endl;\n//outputs 0",
-    "Language": "c++"
-  },
-  {
-    "Content": "const people = [family, friends, lover]\nspendQualityTime(people);",
-    "Language": "js"
-  },
-  {
-    "Content": "chaos.sort();",
-    "Language": "js"
-  },
-  {
-    "Content": "procrastination.end();",
-    "Language": "js"
-  },
-  {
-    "Content": "assertTrue(time.value > money.value);",
-    "Language": "js"
-  },
-  {
-    "Content": "beKind();",
-    "Language": "js"
-  },
-  {
-    "Content": "DELETE * FROM Memories WHERE type='bad';",
-    "Language": "sql"
-  },
-  {
-    "Content": "fear.reduce();",
-    "Language": "js"
-  },
-  {
-    "Content": "code();",
-    "Language": "js"
-  },
-  {
-    "Content": "relax();",
-    "Language": "java"
-  },
-  {
-    "Content": "bePatient();",
-    "Language": "java"
-  },
-  {
-    "Content": "enjoy();",
-    "Language": "c"
-  },
-  {
-    "Content": "read();",
-    "Language": "pyhon"
-  },
-  {
-    "Content": "study().then(execute()).then(succeed()).catch(retry());",
-    "Language": "js"
-  },
-  {
-    "Content": "new Thought(past, present, future);",
-    "Language": "c#"
-  },
-  {
-    "Content": "(life*)malloc(sizeof(dreams));",
-    "Language": "c"
-  },
-  {
-    "Content": "console.log('HAPPINESS');",
-    "Language": "js"
-  },
-  {
-    "Content": "new Investment(self);",
-    "Language": "python"
-  },
-  {
-    "Content": "self.teach();",
-    "Language": "java"
-  },
-  {
-    "Content": "world.Restore();",
-    "Language": "js"
-  },
-  {
-    "Content": "friends.filter(friend => friend.type === 'real')",
-    "Language": "js"
-  },
-  {
-    "Content": "console.log(goals);",
-    "Language": "js"
-  },
-  {
-    "Content": "chances.forEach(chance => chance.take());",
-    "Language": "js"
-  },
-  {
-    "Content": "goals.visualize();",
-    "Language": "python"
-  },
-  {
-    "Content": "alert('practice makes perfect')",
-    "Language": "js"
-  },
-  {
-    "Content": "laziness.abort();",
-    "Language": "js"
-  },
-  {
-    "Content": "if (self.getDoubt() > HEALTHY_THRESHHOLD){\n\tgoals.setDifficulty(HIGH);\n}",
-    "Language": "java"
-  },
-  {
-    "Content": "idea.lock();\nexecute(idea);\nidea.unlock();",
-    "Language": "java"
-  },
-  {
-    "Content": "garbageCollect();",
-    "Language": "js"
-  },
-  {
-    "Content": "happiness++;",
-    "Language": "go"
-  },
-  {
-    "Content": "new Attitude('positive');",
-    "Language": "c#"
-  },
-  {
-    "Content": "give.then(recieve());",
-    "Language": "js"
-  },
-  {
-    "Content": "action.getFeedback();",
-    "Language": "java"
-  },
-  {
-    "Content": "new Media(filter);",
-    "Language": "c#"
-  },
-  {
-    "Content": "nature.CleanUp();",
-    "Language": "js"
-  },
-  {
-    "Content": "happiness.getInstance();",
-    "Language": "js"
-  },
-  {
-    "Content": "if (socialDistancing.isOver()){\n\tpeople.hug();\n}",
-    "Language": "python"
-  },
-  {
-    "Content": "smile();",
-    "Language": "python"
-  },
-  {
-    "Content": "DELETE * FROM myself WHERE emotion = 'hatered';",
-    "Language": "sql"
-  },
-  {
-    "Content": "alert('stay motivated!');",
-    "Language": "js"
-  },
-  {
-    "Content": "give();",
-    "Language": "js"
-  },
-  {
-    "Content": "new Achievement(work, time);",
-    "Language": "c#"
-  },
-  {
-    "Content": "if (angry) {\n\t silentMode.on();\n}",
-    "Language": "c"
-  },
-  {
-    "Content": "StressManager.flush();",
-    "Language": "js"
-  },
-  {
-    "Content": "new Happiness(gratitude);",
-    "Language": "c#"
-  },
-  {
-    "Content": "while(quarantine.length > 0){\n\tstayCalm();\n}",
-    "Language": "c"
-  },
-  {
-    "Content": "self.improve();",
-    "Language": "python"
-  },
-  {
-    "Content": "patience.getInstance();",
-    "Language": "js"
-  },
-  {
-    "Content": "focus();",
-    "Language": "js"
-  },
-  {
-    "Content": "new Relaxation(stress);",
-    "Language": "js"
-  },
-  {
-    "Content": "study.then(relax()).catch(stress());",
-    "Language": "js"
-  },
-  {
-    "Content": "new Idea(knowledge, experience);",
-    "Language": "c#"
-  },
-  {
-    "Content": "new Reality(dream);",
-    "Language": "c#"
-  },
-  {
-    "Content": "path.create();",
-    "Language": "js"
-  },
-  {
-    "Content": "thoughts.filter('positive');",
-    "Language": "js"
-  },
-  {
-    "Content": "console.log(future);",
-    "Language": "js"
-  },
-  {
-    "Content": "DELETE * FROM thoughts WHERE category = 'negative';",
-    "Language": "sql"
-  },
-  {
-    "Content": "INSERT INTO expectations (TYPE, Description)\nVALUES ('positive','It will be alright');",
-    "Language": "sql"
-  },
-  {
-    "Content": "SELECT * people WHERE attitude = 'good';",
-    "Language": "sql"
-  },
-  {
-    "Content": "comfortZone.push();",
-    "Language": "js"
-  },
-  {
-    "Content": "overthink.init();\n//Internal Error: too much recursion",
-    "Language": "js"
-  },
-  {
-    "Content": "smile.find(reason);",
-    "Language": "js"
-  },
-  {
-    "Content": "motivation++;",
-    "Language": "go"
-  },
-  {
-    "Content": "procrastination--;",
-    "Language": "go"
-  },
-  {
-    "Content": "live.now();",
-    "Language": "js"
-  },
-  {
-    "Content": "setInterval(code, 700000)",
-    "Language": "js"
-  },
-  {
-    "Content": "class Mood extends Happiness { }",
-    "Language": "java"
-  },
-  {
-    "Content": "me.status = Status.Focused;",
-    "Language": "js"
+    "Id": "c66a7d12-3fc5-44e5-97cb-9610a91f31eb",
+    "Name": "C#",
+    "Code": "cs",
+    "Quotes": [
+      { "Content": "new Lesson(mistake);" },
+      { "Content": "new Inspiration(ideas);" },
+      { "Content": "new Chance();" },
+      { "Content": "new Attitude('positive');" },
+      { "Content": "new Media(filter);" },
+      { "Content": "new Achievement(work, time);" },
+      { "Content": "new Thought(past, present, future);" },
+      { "Content": "new Reality(dream);" },
+      { "Content": "new Happiness(gratitude);" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "91d45265-0bb6-4a69-81de-0123c5fdd7c6",
+    "Name": "Java",
+    "Code": "java",
+    "Quotes": [
+      { "Content": "void Overthinking(){\n\tOverthinking();\n}" },
+      { "Content": "new luck(work, consistency);" },
+      { "Content": "relax();" },
+      { "Content": "bePatient();" },
+      { "Content": "setGoal(name, time, significance);" },
+      { "Content": "self.teach();" },
+      { "Content": "idea.lock();\nexecute(idea);\nidea.unlock();" },
+      { "Content": "action.getFeedback();" },
+      { "Content": "System.out.println(\"Learning never stops\");" },
+      { "Content": "new Journey(success, failures);" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "2f561e5c-d53d-4699-8083-bef8adad9422",
+    "Name": "JavaScript",
+    "Code": "js",
+    "Quotes": [
+      { "Content": "work.getInstancefrom(passion);" },
+      { "Content": "quarantine.restrictions--;" },
+      { "Content": "stressManager.reduce();" },
+      { "Content": "const exams = university.getRest().Revise().Relax();" },
+      { "Content": "getPurpose();" },
+      { "Content": "study.then(practice());" },
+      { "Content": "stayHome();" },
+      { "Content": "doubt.terminate();" },
+      { "Content": "clearYourMind();" },
+      { "Content": "await sign" },
+      { "Content": "alert('Be Grateful');" },
+      { "Content": "action.take(Time.now());" },
+      { "Content": "believe();" },
+      { "Content": "console.log(autodidacticism);\nconsole.log(autodidacticism == selfEducation);\n//Outputs 1" },
+      { "Content": "memories.push(today);" },
+      { "Content": "self.respect();" },
+      { "Content": "priorities.sort();" },
+      { "Content": "chaos.sort();" },
+      { "Content": "procrastination.end();" },
+      { "Content": "assertTrue(time.value > money.value);" },
+      { "Content": "beKind();" },
+      { "Content": "fear.reduce();" },
+      { "Content": "code();" },
+      { "Content": "world.Restore();" },
+      { "Content": "friends.filter(friend => friend.type === 'real')" },
+      { "Content": "console.log(goals);" },
+      { "Content": "chances.forEach(chance => chance.take());" },
+      { "Content": "path.create();" },
+      { "Content": "thoughts.filter('positive');" },
+      { "Content": "console.log(future);" },
+      { "Content": "comfortZone.push();" },
+      { "Content": "overthink.init();\n//Internal Error: too much recursion" },
+      { "Content": "smile.find(reason);" },
+      { "Content": "live.now();" },
+      { "Content": "setInterval(code, 700000);" },
+      { "Content": "me.status = Status.Focused;" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "2d9ad00b-d803-46c7-9bc0-f62f9a617848",
+    "Name": "Python",
+    "Code": "py",
+    "Quotes": [
+      { "Content": "import {luck} from life;" },
+      { "Content": "self.getReflection();" },
+      { "Content": "smile();" },
+      { "Content": "new Investment(self);" },
+      { "Content": "if (socialDistancing.isOver()){\n\tpeople.hug();\n}" },
+      { "Content": "self.improve();" },
+      { "Content": "goals.visualize();" },
+      { "Content": "self.getInspiration();" },
+      { "Content": "import motivation\nmotivation.execute()" },
+      { "Content": "self.challenge()\nself.grow()" },
+      { "Content": "life.debug()" },
+      { "Content": "self.getMotivation();" },
+      { "Content": "self.getHappiness();" },
+      { "Content": "self.getSuccess();" },
+      { "Content": "self.getPeace();" },
+      { "Content": "self.getLove();" },
+      { "Content": "self.getJoy();" },
+      { "Content": "self.getHope();" },
+      { "Content": "self.getFaith();" },
+      { "Content": "self.getKindness();" },
+      { "Content": "self.getCourage();" },
+      { "Content": "self.getStrength();" },
+      { "Content": "self.getWisdom();" },
+      { "Content": "self.getPatience();" },
+      { "Content": "self.getConfidence();" },
+      { "Content": "self.getGratitude();" },
+      { "Content": "self.getResilience();" },
+      { "Content": "self.getOptimism();" },
+      { "Content": "self.getPerseverance();" },
+      { "Content": "self.getDetermination();" },
+      { "Content": "self.getEmpathy();" },
+      { "Content": "self.getCompassion();" },
+      { "Content": "self.getForgiveness();" },
+      { "Content": "self.getUnderstanding();" },
+      { "Content": "self.getAcceptance();" },
+      { "Content": "self.getTolerance();" },
+      { "Content": "self.getRespect();" },
+      { "Content": "self.getAppreciation();" },
+      { "Content": "self.getRecognition();" },
+      { "Content": "self.getAcknowledgment();" },
+      { "Content": "self.getValidation();" },
+      { "Content": "self.getApproval();" },
+      { "Content": "self.getPraise();" },
+      { "Content": "self.getEncouragement();" },
+      { "Content": "self.getSupport();" },
+      { "Content": "self.getAssistance();" },
+      { "Content": "self.getHelp();" },
+      { "Content": "self.getGuidance();" },
+      { "Content": "self.getAdvice();" },
+      { "Content": "self.getRecommendation();" },
+      { "Content": "self.getSuggestion();" },
+      { "Content": "self.getCounsel();" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "9e4f763e-4720-4c23-b658-ef314fdedf90",
+    "Name": "SQL",
+    "Code": "sql",
+    "Quotes": [
+      { "Content": "DELETE * FROM Memories WHERE type='bad';" },
+      { "Content": "DELETE * FROM myself WHERE emotion = 'hatered';" },
+      { "Content": "DELETE * FROM thoughts WHERE category = 'negative';" },
+      { "Content": "INSERT INTO expectations (TYPE, Description)\nVALUES ('positive','It will be alright');" },
+      { "Content": "SELECT * people WHERE attitude = 'good';" },
+      { "Content": "SELECT * FROM dreams WHERE effort = 'high';" },
+      { "Content": "UPDATE life SET happiness = happiness + 1 WHERE gratitude = 'true';" },
+      { "Content": "DELETE FROM fears WHERE type = 'irrational';" },
+      { "Content": "INSERT INTO success (persistence, hard_work) VALUES (1, 1);" },
+      { "Content": "SELECT * FROM opportunities WHERE effort > luck;" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "832a38a7-b02b-44c1-8000-66f144e8ed59",
+    "Name": "Go",
+    "Code": "go",
+    "Quotes": [
+      { "Content": "sleep--;\nproductivity++;" },
+      { "Content": "happiness++;" },
+      { "Content": "motivation++;" },
+      { "Content": "procrastination--;" },
+      { "Content": "progress++;" },
+      { "Content": "time.Sleep(dreams);" },
+      { "Content": "mindset.Update(true);" },
+      { "Content": "success := make(chan Result)" },
+      { "Content": "motivation.Increment();" },
+      { "Content": "executePlan(goal)" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "7f5af22a-05c4-4d2a-b493-dba77c5e130b",
+    "Name": "Kotlin",
+    "Code": "kt",
+    "Quotes": [
+      { "Content": "new Skill(desire, time);" },
+      { "Content": "new Day(hope);" },
+      { "Content": "fun startJourney(): Path = Path(success, failure)" },
+      { "Content": "val inspiration = findInspiration(today)" },
+      { "Content": "data class Dream(val hope: Int, val effort: Int)" },
+      { "Content": "goals.forEach { it.execute() }" },
+      { "Content": "val future = buildPlan(present)" },
+      { "Content": "new Hope(persistence, vision);" },
+      { "Content": "println(\"Keep moving forward!\")" },
+      { "Content": "new Step(ambition, passion);" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "6b8b2174-8a77-44f2-853f-9b13379f94aa",
+    "Name": "C++",
+    "Code": "cpp",
+    "Quotes": [
+      { "Content": "cout<< past == future << endl;\n//outputs 0" },
+      { "Content": "std::cout << \"Success comes with persistence\" << std::endl;" },
+      { "Content": "int growth = knowledge * practice;" },
+      { "Content": "if (!failure) {\n\tkeepGoing();\n}" },
+      { "Content": "std::vector<Experience> lifePath = {effort, learning, dedication};" },
+      { "Content": "void dreamBig() {\n\tstd::cout << \"Keep dreaming!\" << std::endl;\n}" },
+      { "Content": "Success* goal = new Success(hardWork, patience);" },
+      { "Content": "while (progress < goal) {\n\tkeepTrying();\n}" },
+      { "Content": "delete doubt;\ndelete fear;" },
+      { "Content": "std::future<Achievement> result = std::async(std::launch::async, achieveGoal);" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "c3702a10-9f5e-4512-a5c9-23ecfca9f94b",
+    "Name": "C",
+    "Code": "c",
+    "Quotes": [
+      { "Content": "enjoy();" },
+      { "Content": "(life*)malloc(sizeof(dreams));" },
+      { "Content": "if (angry) {\n\t silentMode.on();\n}" },
+      { "Content": "while(quarantine.length > 0){\n\tstayCalm();\n}" },
+      { "Content": "#include <life.h>\nint main() {\n\tprintf(\"Keep pushing forward!\");\n\treturn 0;\n}" },
+      { "Content": "dreams = (future*)malloc(sizeof(persistence));" },
+      { "Content": "void goals() {\n\tachieve();\n}" },
+      { "Content": "int success = work + dedication;" },
+      { "Content": "keepLearning();" },
+      { "Content": "while(!goalReached) {\n\tkeepTrying();\n}" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "e81d79b5-924f-4dd6-8b1e-4d64a36f178d",
+    "Name": "Swift",
+    "Code": "swift",
+    "Quotes": [
+      { "Content": "new Day(optimism);" },
+      { "Content": "let hope = Day(positive)" },
+      { "Content": "print(\"The journey continues!\")" },
+      { "Content": "var dream: Dream = Dream(persistence: 100)" },
+      { "Content": "success.await(patience)" },
+      { "Content": "let progress = executePlan(ambition)" },
+      { "Content": "func stayFocused() -> Bool { return true }" },
+      { "Content": "try newStep(vision)" },
+      { "Content": "let tomorrow = makePlan(today)" },
+      { "Content": "while !goalAchieved {\n\tdoMore();\n}" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "50f8ebf5-5749-4538-8f84-c717af95a6fa",
+    "Name": "Byte",
+    "Code": "byte",
+    "Quotes": [
+      { "Content": "Happy 11111100110;" },
+      { "Content": "01101000 01101111 01110000 01100101 = hope" },
+      { "Content": "print 101010101010; // Hope encoded" },
+      { "Content": "01010100 01101000 01101001 01110011 00100000 01101001 01110011 00100000 01110011 01110101 01100011 01100011 01100101 01110011 01110011; // This is success" },
+      { "Content": "1110011 1110101 1110100 1100011 1100101 1110011 1110011" },
+      { "Content": "10001001 10010110 11100101 = belief" },
+      { "Content": "1100001 1100011 1100100 1100101 1101001 1110110 1100010" },
+      { "Content": "01110000 01110010 01101111 01100111 01110010 01100001 01101101" },
+      { "Content": "00001111 00110011 10101010 // Keep moving" },
+      { "Content": "00010001 11110000 1010101 = TakeAction()" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "5f1f3c9b-d872-4782-b457-0b91807d3f21",
+    "Name": "HTML",
+    "Code": "html",
+    "Quotes": [
+      { "Content": "<h1>Keep Learning</h1>" },
+      { "Content": "<div>Success is built step by step</div>" },
+      { "Content": "<a href='dreams.html'>Chase Your Dreams</a>" },
+      { "Content": "<p>Persistence is key to success</p>" },
+      { "Content": "<input type='text' placeholder='Enter your goals'>" },
+      { "Content": "<button onclick='startJourney()'>Start Now</button>" },
+      { "Content": "<h2>Never stop coding</h2>" },
+      { "Content": "<form action='/achieve' method='post'></form>" },
+      { "Content": "<footer>Keep moving forward</footer>" },
+      { "Content": "<img src='success.png' alt='Path to Success'>" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "91f4d507-cfe3-44b3-a543-13143747c2be",
+    "Name": "CSS",
+    "Code": "css",
+    "Quotes": [
+      { "Content": "body { background-color: determination; }" },
+      { "Content": "p { color: persistence; font-size: growth; }" },
+      { "Content": "h1 { font-weight: bold; }" },
+      { "Content": ".goals { display: block; margin: 0 auto; }" },
+      { "Content": "div.motivation { animation: progress 1s infinite; }" },
+      { "Content": "button { background-color: #success; }" },
+      { "Content": ".dream { text-align: center; }" },
+      { "Content": "#hope { visibility: visible; }" },
+      { "Content": "a:hover { text-decoration: underline; }" },
+      { "Content": "footer { position: fixed; bottom: 0; }" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "df1e14be-7926-41f0-927e-d15b57db2d97",
+    "Name": "PHP",
+    "Code": "php",
+    "Quotes": [
+      { "Content": "<?php echo 'Keep coding!'; ?>" },
+      { "Content": "$success = new Journey($hardwork, $persistence);" },
+      { "Content": "if ($life->isChallenging()) { echo 'Keep going!'; }" },
+      { "Content": "echo 'Believe in your dreams';" },
+      { "Content": "function achieveGoal($effort, $consistency) { return true; }" },
+      { "Content": "while($learning) { $progress++; }" },
+      { "Content": "$motivation->increase();" },
+      { "Content": "$result = $work->execute();" },
+      { "Content": "echo 'Path to success';" },
+      { "Content": "$action->take(); // Achieve your goals" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "5a97f5a7-0218-411a-ae75-d6d61f2e3037",
+    "Name": "Ruby",
+    "Code": "rb",
+    "Quotes": [
+      { "Content": "puts 'Keep pushing forward!'" },
+      { "Content": "def succeed\n\teffort + persistence\nend" },
+      { "Content": "if dreams\n\tkeep_chasing\nend" },
+      { "Content": "class Journey\n\tdef initialize(hard_work, patience)\n\tend\nend" },
+      { "Content": "goal = achieve(success)" },
+      { "Content": "while motivation < 100\n\tkeep_working\nend" },
+      { "Content": "life.update(dedication: true)" },
+      { "Content": "dreams.each { |dream| follow(dream) }" },
+      { "Content": "happiness ||= find_inspiration" },
+      { "Content": "new_hope = Hope.new(perseverance)" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "7b2a22b4-550b-47be-899e-b0226a268537",
+    "Name": "Rust",
+    "Code": "rs",
+    "Quotes": [
+      { "Content": "fn persist() -> Result<Success, Failure> { Ok(Success) }" },
+      { "Content": "let motivation: i32 = 100;" },
+      { "Content": "while effort < goal { keep_trying(); }" },
+      { "Content": "println!(\"Stay consistent!\");" },
+      { "Content": "let result = achieve(&hardwork, &patience);" },
+      { "Content": "let happiness = Success::new(persistence, passion);" },
+      { "Content": "if let Some(dream) = find_hope() { pursue(dream); }" },
+      { "Content": "let progress = journey.forward();" },
+      { "Content": "match life { Ok(success) => keep_moving(), Err(failure) => retry(), }" },
+      { "Content": "fn grow() { println!(\"Never stop learning!\"); }" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "dbf3ab50-8047-4b74-88e1-54ab8de9b7b1",
+    "Name": "Bash / Shell",
+    "Code": "sh",
+    "Quotes": [
+      { "Content": "echo 'Stay persistent!'" },
+      { "Content": "while [ $effort -lt $goal ]; do keepGoing; done" },
+      { "Content": "goal=$(expr $hardwork + $consistency)" },
+      { "Content": "if [ $success ]; then echo 'Keep moving forward'; fi" },
+      { "Content": "motivation=$((motivation+1))" },
+      { "Content": "for i in $(seq 1 10); do keepLearning; done" },
+      { "Content": "continueJourney || exit 1" },
+      { "Content": "success=$(achieveGoal)" },
+      { "Content": "test -f 'dream.txt' && echo 'Follow your dreams!'" },
+      { "Content": "export HOPE='high';" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "1f2e1cf7-0911-4e25-8156-9674d5c4853e",
+    "Name": "Scala",
+    "Code": "scala",
+    "Quotes": [
+      { "Content": "val success = Journey(hardwork, perseverance)" },
+      { "Content": "if (life.isChallenging) keepMoving()" },
+      { "Content": "def achieve(goal: Goal): Result = Success" },
+      { "Content": "while (progress < goal) continue()" },
+      { "Content": "val inspiration = findHope()" },
+      { "Content": "case class Dream(hope: Int, effort: Int)" },
+      { "Content": "dreams.foreach(follow)" },
+      { "Content": "val persistence = 100 + hardwork" },
+      { "Content": "println(\"Keep coding!\")" },
+      { "Content": "goal match { case Success => continueJourney() case Failure => retry() }" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "702579b7-01da-4a90-b57d-e131d4dc267b",
+    "Name": "Dart",
+    "Code": "dart",
+    "Quotes": [
+      { "Content": "void main() => print('Keep moving forward!');" },
+      { "Content": "int progress = effort + consistency;" },
+      { "Content": "if (success) { achieveGoal(); }" },
+      { "Content": "var dream = follow(yourDreams);" },
+      { "Content": "while (learning) { progress++; }" },
+      { "Content": "final goal = new Journey(hardwork, patience);" },
+      { "Content": "List<Achievement> results = [hardwork, dedication];" },
+      { "Content": "goal.execute();" },
+      { "Content": "happiness += passion;" },
+      { "Content": "life.debug();" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "bda9a6fb-12f4-4fe5-a68e-5e09a8b93f5d",
+    "Name": "R",
+    "Code": "r",
+    "Quotes": [
+      { "Content": "print('Stay persistent!')" },
+      { "Content": "goal <- achieve(hardwork, patience)" },
+      { "Content": "if (life == 'challenging') { keepGoing() }" },
+      { "Content": "progress <- seq(1, 100, by=1)" },
+      { "Content": "success <- function() { return(persistence + passion) }" },
+      { "Content": "motivation <- motivation + 1" },
+      { "Content": "while (effort < goal) { tryHarder() }" },
+      { "Content": "dream <- follow(inspiration)" },
+      { "Content": "result <- future(success)" },
+      { "Content": "print('Keep coding!')" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
+  },
+  {
+    "Id": "39e1b674-ea92-45fa-b254-74f540f5d00e",
+    "Name": "Assembly",
+    "Code": "asm",
+    "Quotes": [
+      { "Content": "MOV AX, Persistence" },
+      { "Content": "ADD Happiness, #1" },
+      { "Content": "CMP Effort, Goal\nJLE KeepTrying" },
+      { "Content": "JMP Success" },
+      { "Content": "MOV Goal, #100" },
+      { "Content": "INC Motivation" },
+      { "Content": "PUSH Perseverance\nCALL AchieveGoal\nPOP Success" },
+      { "Content": "MOVAX Learning\nADDAX Progress" },
+      { "Content": "LOOP ContinueLearning" },
+      { "Content": "CMP Failure, 0\nJE ContinueJourney" }
+    ],
+    "CreatedAt": "2024-10-24T00:00:00Z"
   }
 ]

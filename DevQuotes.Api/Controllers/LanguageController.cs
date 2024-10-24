@@ -29,7 +29,7 @@ public class LanguageController(IAddLanguageUseCase addLanguageUseCase, IGetLang
     /// <summary>
     /// Get a list of programming languages.
     /// </summary>
-    [HttpGet()]
+    [HttpGet]
     [ProducesResponseType(typeof(List<LanguageResponse>), StatusCodes.Status200OK)]
     public async Task<ActionResult<List<QuoteResponse>>> GetAllAsync(CancellationToken cancellationToken)
     {
@@ -37,39 +37,40 @@ public class LanguageController(IAddLanguageUseCase addLanguageUseCase, IGetLang
     }
 
     /// <summary>
-    /// Get a programming language (with quotes).
+    /// Get a programming language using the name and code.
     /// </summary>
-    /// <param name="lid">Language id.</param>
-    /// <param name="includeQuotes">Include quotes.</param>
-    [HttpGet("by/{lid}")]
+    /// <param name="code">Programming Language Code (file extension eg. (cs/py/js)).</param>
+    [HttpGet("{code}")]
     [ProducesResponseType(typeof(List<LanguageResponse>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetByIdAsync([FromRoute] Guid lid, [FromQuery] bool includeQuotes, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetByCodeAsync([FromRoute] string code, CancellationToken cancellationToken)
     {
-        var result = await _getLanguagesUseCase.ExecuteAsync(lid, includeQuotes, cancellationToken);
+        var result = await _getLanguagesUseCase.ExecuteAsync(code, cancellationToken);
         return result.ToStatusResult(x => x);
     }
 
     /// <summary>
-    /// Get a programming language using the name and code.
+    /// Get a programming language (with quotes).
     /// </summary>
     /// <param name="lid">Language id.</param>
-    /// <param name="includeQuotes">Include quotes.</param>
-    [HttpGet("by")]
+    [HttpGet("by/{lid}")]
+    [Authorize(Policy = "Not Implemented")]
     [ProducesResponseType(typeof(List<LanguageResponse>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetByNameAndCode([FromQuery] string name, [FromQuery] string code, CancellationToken cancellationToken)
+    [ApiExplorerSettings(IgnoreApi = true)]
+    public async Task<IActionResult> GetByIdAsync([FromRoute] Guid lid, CancellationToken cancellationToken)
     {
-        var result = await _getLanguagesUseCase.ExecuteAsync(name, code, cancellationToken);
-        return result.ToStatusResult(x => x);
+        var result = await _getLanguagesUseCase.ExecuteAsync(lid, cancellationToken);
+        return result is null ? NotFound(new ResponseErrorJson("Language not found.", [])) : Ok(result);
     }
 
     /// <summary>
     /// Add new programming language.
     /// </summary>
     [HttpPost]
-    [Authorize] // Lol
+    [Authorize(Policy = "Not Implemented")]
     [ProducesResponseType(typeof(LanguageResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status409Conflict)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<IActionResult> AddAsync([FromBody] LanguageRequest newLanguage, CancellationToken cancellationToken)
     {
         var result = await _addLanguageUseCase.ExecuteAsync(newLanguage, cancellationToken);
@@ -81,10 +82,11 @@ public class LanguageController(IAddLanguageUseCase addLanguageUseCase, IGetLang
     /// </summary>
     /// <param name="lid">Language id.</param>
     [HttpPut("{lid}")]
-    [Authorize] // Lol
+    [Authorize(Policy = "Not Implemented")] 
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<IActionResult> UpdateAsync([FromRoute] Guid lid, [FromBody] LanguageRequest updateLanguage, CancellationToken cancellationToken)
     {
         var result = await _updateLanguageUseCase.ExecuteAsync(lid, updateLanguage, cancellationToken);
@@ -96,10 +98,11 @@ public class LanguageController(IAddLanguageUseCase addLanguageUseCase, IGetLang
     /// </summary>
     /// <param name="lid">Language id.</param>
     [HttpDelete("{lid}")]
-    [Authorize] // Lol
+    [Authorize(Policy = "Not Implemented")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<IActionResult> RemoveAsync([FromRoute] Guid lid, CancellationToken cancellationToken)
     {
         var result = await _deleteLanguageUseCase.ExecuteAsync(lid, cancellationToken);

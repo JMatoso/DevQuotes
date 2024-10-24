@@ -30,27 +30,14 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetQuotesUseCas
     private readonly IUpdateQuoteUseCase _updateQuoteUseCase = updateQuoteUseCase;
 
     /// <summary>
-    /// Get quote.
+    /// Get a random quote (from a specific programming language).
     /// </summary>
-    /// <param name="qid">Quote id.</param>
-    [HttpGet("{qid}")]
-    [ProducesResponseType(typeof(QuoteResponse), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetAsync([FromRoute]Guid qid, CancellationToken cancellationToken)
-    {
-        var result = await _getQuotesUseCase.ExecuteAsync(qid, cancellationToken);
-        return result.ToStatusResult(x => x);
-    }
-
-    /// <summary>
-    /// Get a random quote.
-    /// </summary>
+    /// <param name="code">Programming Language Code (file extension eg. (cs/py/js)).</param>
     [HttpGet("random")]
     [ProducesResponseType(typeof(QuoteResponse), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetRandomAsync(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetRandomAsync([FromQuery] string code, CancellationToken cancellationToken)
     {
-        var result = await _getQuotesUseCase.ExecuteAsync(cancellationToken);
+        var result = await _getQuotesUseCase.ExecuteAsync(code, cancellationToken);
         return result.ToStatusResult(x => x);
     }
 
@@ -67,13 +54,30 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetQuotesUseCas
     }
 
     /// <summary>
+    /// Get quote.
+    /// </summary>
+    /// <param name="qid">Quote id.</param>
+    [HttpGet("{qid}")]
+    [Authorize(Policy = "Not Implemented")]
+    [ProducesResponseType(typeof(QuoteResponse), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(IgnoreApi = true)]
+    public async Task<IActionResult> GetAsync([FromRoute] Guid qid, CancellationToken cancellationToken)
+    {
+        var result = await _getQuotesUseCase.ExecuteAsync(qid, cancellationToken);
+        return result is null ? NotFound(new ResponseErrorJson("Quote not found.", [])) : Ok(result);
+    }
+
+    /// <summary>
     /// Add a quote.
     /// </summary>
     [HttpPost]
-    [Authorize] // Lol
+    [Authorize(Policy = "Not Implemented")]
     [ProducesResponseType(typeof(QuoteResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status409Conflict)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<IActionResult> AddAsync([FromBody] QuoteRequest newQuote, CancellationToken cancellationToken)
     {
         var result = await _addQuoteUseCase.ExecuteAsync(newQuote, cancellationToken);
@@ -85,10 +89,11 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetQuotesUseCas
     /// </summary>
     /// <param name="qid">Quote id.</param>
     [HttpPut("{qid}")]
-    [Authorize] // Lol
+    [Authorize(Policy = "Not Implemented")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<IActionResult> UpdateAsync([FromRoute] Guid qid, [FromBody] QuoteRequest updateQuote, CancellationToken cancellationToken)
     {
         var result = await _updateQuoteUseCase.ExecuteAsync(qid, updateQuote, cancellationToken);
@@ -100,10 +105,11 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetQuotesUseCas
     /// </summary>
     /// <param name="qid">Quote id.</param>
     [HttpDelete("{qid}")]
-    [Authorize] // Lol
+    [Authorize(Policy = "Not Implemented")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<IActionResult> RemoveAsync([FromRoute] Guid qid, CancellationToken cancellationToken)
     {
         var result = await _deleteQuoteUseCase.ExecuteAsync(qid, cancellationToken);

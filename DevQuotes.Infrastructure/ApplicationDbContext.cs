@@ -1,4 +1,5 @@
 ﻿using DevQuotes.Communication.Requests;
+using DevQuotes.Communication.Responses;
 using DevQuotes.Domain.Entities;
 using DevQuotes.Shared;
 using Microsoft.EntityFrameworkCore;
@@ -58,15 +59,24 @@ public class ApplicationDbContext : DbContext
 
         if (File.Exists(seedFilePath))
         {
-            string fileContent = File.ReadAllText(seedFilePath);
-            var oldQuotes = JsonConvert.DeserializeObject<List<QuoteRequest>>(fileContent) ?? [];
+            var fileContent = File.ReadAllText(seedFilePath);
+            var quotesToSeed = JsonConvert.DeserializeObject<List<LanguageResponse>>(fileContent) ?? [];
 
-            oldQuotes.ForEach((item) =>
+            quotesToSeed.ForEach((item) =>
             {
-                Quotes.Add(new Quote()
+                var language = new Language()
                 {
-                    Content = item.Content
-                });
+                    Name = item.Name,
+                    Code = item.Code
+                };
+
+                language.Quotes = item.Quotes.Select(q => new Quote()
+                {
+                    Content = q.Content,
+                    Language = language
+                }).ToList();
+
+                Languages.Add(language);
             });
 
             SaveChanges();

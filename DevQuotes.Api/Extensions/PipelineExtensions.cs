@@ -15,6 +15,7 @@ public static class PipelineExtensions
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
+        app.UseAuthentication();
 
         if (corsOptions is not null)
         {

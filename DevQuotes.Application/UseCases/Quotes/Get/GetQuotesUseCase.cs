@@ -1,4 +1,5 @@
 ﻿using DevQuotes.Communication.Responses;
+using DevQuotes.Domain.Entities;
 using DevQuotes.Exceptions;
 using DevQuotes.Infrastructure.Helpers.Pagination;
 using DevQuotes.Infrastructure.Repository.Quotes;
@@ -26,21 +27,14 @@ public sealed class GetQuotesUseCase(IQuotesRepository quotesRepository) : IGetQ
         };
     }
 
-    public async Task<Result<QuoteResponse>> ExecuteAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task<Quote?> ExecuteAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        if (id == Guid.Empty)
-        {
-            var validationError = new ApplicationException();
-            validationError.AddPropertyError(nameof(id), "Id cannot be empty.");
-            return new Result<QuoteResponse>(validationError);
-        }
-
-        return GetResult(await _quotesRepository.GetAsync(id, cancellationToken));
+        return await _quotesRepository.FindAsync(id, cancellationToken);
     }
 
-    public async Task<Result<QuoteResponse>> ExecuteAsync(CancellationToken cancellationToken = default)
+    public async Task<Result<QuoteResponse>> ExecuteAsync(string code = "", CancellationToken cancellationToken = default)
     {
-        return GetResult(await _quotesRepository.GetRandomAsync(cancellationToken));
+        return GetResult(await _quotesRepository.GetRandomAsync(code, cancellationToken));
     }
 
     private static Result<QuoteResponse> GetResult(QuoteResponse? quote)

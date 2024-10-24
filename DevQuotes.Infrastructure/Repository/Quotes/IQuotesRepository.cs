@@ -12,8 +12,7 @@ namespace DevQuotes.Infrastructure.Repository.Quotes
         Task<Result> DeleteAsync(Guid id, CancellationToken cancellationToken = default);
         ValueTask<Quote?> FindAsync(Guid id, CancellationToken cancellationToken = default);
         Task<PagedList<QuoteResponse>> GetAllAsync(PaginationParameters parameters, Expression<Func<Quote, bool>>? expression = null, bool ignoreQueryFilter = false, CancellationToken cancellationToken = default);
-        Task<QuoteResponse?> GetAsync(Guid id, CancellationToken cancellationToken = default);
-        Task<QuoteResponse?> GetRandomAsync(CancellationToken cancellationToken = default);
+        Task<QuoteResponse?> GetRandomAsync(string code = "", CancellationToken cancellationToken = default);
         Task<Result> UpdateAsync(Quote quote, CancellationToken cancellationToken = default);
     }
 }

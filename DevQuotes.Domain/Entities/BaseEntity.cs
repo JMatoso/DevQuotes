@@ -6,9 +6,14 @@ namespace DevQuotes.Domain.Entities;
 public abstract class BaseEntity
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public Guid Id { get; private set; }
     public bool IsDeleted { get; private set; }
     public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
     public void Delete() => IsDeleted = true;
+
+    protected BaseEntity()
+    {
+        Id = Guid.NewGuid();
+    }
 }

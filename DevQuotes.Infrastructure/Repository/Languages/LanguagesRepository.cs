@@ -18,53 +18,23 @@ public sealed class LanguagesRepository(ApplicationDbContext dbContext) : ILangu
     {
         return await _dbContext.Languages.AsNoTracking().Select(x => new LanguageResponse()
         {
-            Id = x.Id,
             Name = x.Name,
             Code = x.Code,
         }).ToListAsync(cancellationToken);
     }
 
-    public async Task<LanguageResponse?> GetAsync(Guid id, bool includeQuotes = false, CancellationToken cancellationToken = default)
-    {
-        if (includeQuotes)
-        {
-            return await _dbContext.Languages.AsNoTracking().Select(x => new LanguageResponse()
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Code = x.Code,
-                Quotes = x.Quotes.Select(q => new QuoteResponse()
-                {
-                    Id = q.Id,
-                    Content = q.Content
-                }).ToList(),
-            }).FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
-        }
-
-        return await _dbContext.Languages.Select(x => new LanguageResponse()
-        {
-            Id = x.Id,
-            Name = x.Name,
-            Code = x.Code,
-            CreatedAt = x.CreatedAt
-        }).FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
-    }
-
-    public async Task<LanguageResponse?> GetByAsync(string name, string code, CancellationToken cancellationToken = default)
+    public async Task<LanguageResponse?> GetByAsync(string code, CancellationToken cancellationToken = default)
     {
         return await _dbContext.Languages.AsNoTracking()
-            .Where(x => x.Name.Equals(name) && x.Code.Equals(code))
             .Select(x => new LanguageResponse()
             {
-                Id = x.Id,
                 Name = x.Name,
                 Code = x.Code,
                 Quotes = x.Quotes.Select(q => new QuoteResponse()
                 {
-                    Id = q.Id,
                     Content = q.Content
                 }).ToList(),
-            }).FirstOrDefaultAsync(x => x.Code == code, cancellationToken);
+            }).FirstOrDefaultAsync(x => x.Code.Equals(code), cancellationToken);
     }
 
     public async Task<Result> AddAsync(Language language, CancellationToken cancellationToken = default)

@@ -15,9 +15,7 @@ public static class SwaggerExtensions
                 Version = $"v1",
                 Description = @"The Coding Quotes API provides a curated collection of inspiring 
                                 and motivational quotes tailored for programmers, developers, and 
-                                technology enthusiasts. With a simple and efficient integration, this API 
-                                allows you to retrieve quotes about programming, software development, and technology, 
-                                ready to be displayed in web applications, blogs, dashboards, or even mobile apps.",
+                                technology enthusiasts.",
                 Contact = new OpenApiContact
                 {
                     Name = "José Matoso",
