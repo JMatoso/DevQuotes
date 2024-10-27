@@ -32,6 +32,7 @@ public class QuotesController(IAddQuoteUseCase addQuoteUseCase, IGetQuotesUseCas
     [HttpGet("/")]
     [HttpGet("/home")]
     [HttpGet("/index")]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public IActionResult Index()
     {
         return Redirect("/index.html");
