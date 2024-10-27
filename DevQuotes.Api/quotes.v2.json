@@ -181,7 +181,7 @@
     "Quotes": [
       { "Content": "new Skill(desire, time);" },
       { "Content": "new Day(hope);" },
-      { "Content": "fun startJourney(): Path = Path(success, failure)" },
+      { "Content": "fun startJourney(): \n\tPath = Path(success, failure)" },
       { "Content": "val inspiration = findInspiration(today)" },
       { "Content": "data class Dream(val hope: Int, val effort: Int)" },
       { "Content": "goals.forEach { it.execute() }" },
