@@ -37,7 +37,7 @@ public class LanguageController(IAddLanguageUseCase addLanguageUseCase, IGetLang
     }
 
     /// <summary>
-    /// Get a programming language using the name and code.
+    /// Get a programming language using its code.
     /// </summary>
     /// <param name="code">Programming Language Code (file extension eg. (cs/py/js)).</param>
     [HttpGet("{code}")]
