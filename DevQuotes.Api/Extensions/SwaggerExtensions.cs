@@ -20,7 +20,7 @@ public static class SwaggerExtensions
                 {
                     Name = "José Matoso",
                     Email = "joaquimjose@duck.com",
-                    Url = new Uri("https://codequotes-nine.vercel.app/")
+                    Url = new Uri("https://github.com/JMatoso/")
                 },
                 License = new OpenApiLicense
                 {
