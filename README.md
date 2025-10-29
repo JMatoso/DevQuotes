@@ -314,7 +314,7 @@ dotnet watch --project DevQuotes.Api
 # Build Docker image
 docker build -t devquotes .
 
-# Run container
+# Run container (maps host port 8080 to container port 10000)
 docker run -p 8080:10000 devquotes
 
 # Run with docker-compose
@@ -383,8 +383,11 @@ docker build -t devquotes:latest .
 ### Running the Container
 
 ```bash
-docker run -d -p 10000:10000 --name devquotes-api devquotes:latest
+# Run with port mapping (host:container)
+docker run -d -p 8080:10000 --name devquotes-api devquotes:latest
 ```
+
+The container exposes port 10000 internally, which is mapped to port 8080 on the host machine.
 
 ### Using Docker Compose
 
@@ -394,7 +397,7 @@ The project includes a `docker-compose.yml` file for simplified deployment:
 docker-compose up -d
 ```
 
-This will build and start the application, exposing it on port 8080.
+This will build and start the application. The service will be accessible on the host machine at port 8080, which maps to the container's internal port (configured in docker-compose.yml).
 
 ### Docker Configuration
 
